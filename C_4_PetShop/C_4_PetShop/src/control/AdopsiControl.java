@@ -15,7 +15,7 @@ public class AdopsiControl {
 
         hControl.updateStatusAdopsi(
                 a.getId_hewan(),
-                "Diadopsi"
+                "Dimiliki"
         );
     }
 

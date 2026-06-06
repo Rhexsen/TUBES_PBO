@@ -12,7 +12,7 @@ import model.Adopsi;
 public class AdopsiDAO implements IDAO<Adopsi, Integer>{
 
     private DbConnection dbCon = new DbConnection();
-    private Connection con;
+    private Connection con;   
 
     @Override
     public void insert(Adopsi data) {
