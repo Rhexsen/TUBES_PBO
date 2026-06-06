@@ -42,7 +42,6 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
         namaHewanDropdown = new javax.swing.JComboBox<>();
         tanggalAdopsiPanel = new javax.swing.JPanel();
         tanggalAdopsiLabel = new javax.swing.JLabel();
-        tanggalAdopsiJDateChooser = new com.toedter.calendar.JDateChooser();
         statusAdopsiPanel = new javax.swing.JPanel();
         statusAdopsiLabel = new javax.swing.JLabel();
         statusAdopsiDropdown = new javax.swing.JComboBox<>();
@@ -195,7 +194,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(idAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(idAdopsiPanelLayout.createSequentialGroup()
                         .addComponent(idAdopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
+                        .addGap(0, 195, Short.MAX_VALUE))
                     .addComponent(idAdopsiTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -206,7 +205,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addComponent(idAdopsiLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(idAdopsiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         namaAdopterPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -228,7 +227,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(namaAdopterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(namaAdopterPanelLayout.createSequentialGroup()
                         .addComponent(namaAdopterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
+                        .addGap(0, 195, Short.MAX_VALUE))
                     .addComponent(namaAdopterTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -239,7 +238,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addComponent(namaAdopterLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(namaAdopterTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         noTeleponPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -261,7 +260,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(noTeleponPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(noTeleponPanelLayout.createSequentialGroup()
                         .addComponent(noTeleponLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
+                        .addGap(0, 195, Short.MAX_VALUE))
                     .addComponent(noTeleponTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -270,7 +269,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, noTeleponPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(noTeleponLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(noTeleponTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -299,7 +298,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(namaHewanPanelLayout.createSequentialGroup()
                         .addComponent(namaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 120, Short.MAX_VALUE))
+                        .addGap(0, 128, Short.MAX_VALUE))
                     .addComponent(namaHewanDropdown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -310,7 +309,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addComponent(namaHewanLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(namaHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         tanggalAdopsiPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -320,29 +319,21 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
         tanggalAdopsiLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         tanggalAdopsiLabel.setText("Tanggal Adopsi");
 
-        tanggalAdopsiJDateChooser.setPreferredSize(new java.awt.Dimension(72, 21));
-
         javax.swing.GroupLayout tanggalAdopsiPanelLayout = new javax.swing.GroupLayout(tanggalAdopsiPanel);
         tanggalAdopsiPanel.setLayout(tanggalAdopsiPanelLayout);
         tanggalAdopsiPanelLayout.setHorizontalGroup(
             tanggalAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tanggalAdopsiPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(tanggalAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tanggalAdopsiPanelLayout.createSequentialGroup()
-                        .addComponent(tanggalAdopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(tanggalAdopsiJDateChooser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(tanggalAdopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(201, Short.MAX_VALUE))
         );
         tanggalAdopsiPanelLayout.setVerticalGroup(
             tanggalAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tanggalAdopsiPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(tanggalAdopsiLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tanggalAdopsiJDateChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 17, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         statusAdopsiPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -369,7 +360,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(statusAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(statusAdopsiPanelLayout.createSequentialGroup()
                         .addComponent(statusAdopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 120, Short.MAX_VALUE))
+                        .addGap(0, 128, Short.MAX_VALUE))
                     .addComponent(statusAdopsiDropdown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -380,7 +371,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addComponent(statusAdopsiLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statusAdopsiDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         biayaAdopsiPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -412,7 +403,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addComponent(biayaAdopsiLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(biayaAdopsiTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         alamatAdopterPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -435,7 +426,7 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
                 .addGroup(alamatAdopterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(alamatAdopterScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(alamatAdopterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         alamatAdopterPanelLayout.setVerticalGroup(
             alamatAdopterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -675,7 +666,6 @@ public class AdopsiMainPanel extends javax.swing.JPanel {
     private javax.swing.JPanel statusAdopsiPanel;
     private javax.swing.JTable tableAdopsi;
     private javax.swing.JButton tambahAdopsiButton;
-    private com.toedter.calendar.JDateChooser tanggalAdopsiJDateChooser;
     private javax.swing.JLabel tanggalAdopsiLabel;
     private javax.swing.JPanel tanggalAdopsiPanel;
     // End of variables declaration//GEN-END:variables

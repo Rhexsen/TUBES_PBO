@@ -357,7 +357,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="idAdopsiLabel" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="187" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="195" max="32767" attributes="0"/>
                               </Group>
                               <Component id="idAdopsiTextField" max="32767" attributes="0"/>
                           </Group>
@@ -372,7 +372,7 @@
                           <Component id="idAdopsiLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="idAdopsiTextField" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -414,7 +414,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="namaAdopterLabel" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="187" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="195" max="32767" attributes="0"/>
                               </Group>
                               <Component id="namaAdopterTextField" max="32767" attributes="0"/>
                           </Group>
@@ -429,7 +429,7 @@
                           <Component id="namaAdopterLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="namaAdopterTextField" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -474,7 +474,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="noTeleponLabel" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="187" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="195" max="32767" attributes="0"/>
                               </Group>
                               <Component id="noTeleponTextField" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -487,7 +487,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="noTeleponLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                           <Component id="noTeleponTextField" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -534,7 +534,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="namaHewanLabel" min="-2" pref="182" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="120" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="128" max="32767" attributes="0"/>
                               </Group>
                               <Component id="namaHewanDropdown" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -549,7 +549,7 @@
                           <Component id="namaHewanLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="namaHewanDropdown" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -600,14 +600,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="tanggalAdopsiLabel" min="-2" pref="115" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="187" max="32767" attributes="0"/>
-                              </Group>
-                              <Component id="tanggalAdopsiJDateChooser" alignment="1" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="tanggalAdopsiLabel" min="-2" pref="115" max="-2" attributes="0"/>
+                          <EmptySpace pref="201" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -616,9 +610,7 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="tanggalAdopsiLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="tanggalAdopsiJDateChooser" pref="17" max="32767" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace pref="39" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -631,13 +623,6 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="2"/>
                     <Property name="text" type="java.lang.String" value="Tanggal Adopsi"/>
-                  </Properties>
-                </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="tanggalAdopsiJDateChooser">
-                  <Properties>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[72, 21]"/>
-                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -660,7 +645,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="statusAdopsiLabel" min="-2" pref="182" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="120" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="128" max="32767" attributes="0"/>
                               </Group>
                               <Component id="statusAdopsiDropdown" alignment="1" max="32767" attributes="0"/>
                           </Group>
@@ -675,7 +660,7 @@
                           <Component id="statusAdopsiLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="statusAdopsiDropdown" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -744,7 +729,7 @@
                           <Component id="biayaAdopsiLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="biayaAdopsiTextField" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -787,7 +772,7 @@
                               <Component id="alamatAdopterScrollPane" min="-2" pref="302" max="-2" attributes="0"/>
                               <Component id="alamatAdopterLabel" min="-2" pref="115" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="14" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
