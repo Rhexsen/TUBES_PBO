@@ -10,32 +10,24 @@ public class DbConnection {
     public static final String DBNAME = "c_4_petshop";
     public static final String PATH = "localhost:3306/" + DBNAME;
 
-    public Connection makeConnection()
-    {
+    public Connection makeConnection(){
         System.out.println("Opening database...");
-        try
-        {
+        try{
             CON = DriverManager.getConnection(URL + PATH, "root", "");
             System.out.println("Success...");
-        }
-        catch(Exception e)
-        {
+        }catch(Exception e){
             System.out.println("Error opening database");
             System.out.println(e);
         }
         return CON;
     }
 
-    public void closeConnection()
-    {
+    public void closeConnection(){
         System.out.println("Closing database...");
-        try
-        {
+        try{
             CON.close();
             System.out.println("Success...");
-        }
-        catch(Exception e)
-        {
+        }catch(Exception e){
             System.out.println("Error closing database");
             System.out.println(e);
         }
