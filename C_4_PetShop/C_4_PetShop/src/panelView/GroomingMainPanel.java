@@ -168,7 +168,7 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(searchIcon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(searchGroomingInputTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+                .addComponent(searchGroomingInputTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchGroomingInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -177,12 +177,11 @@ public class GroomingMainPanel extends javax.swing.JPanel {
             searchGroomingInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchGroomingInputPanelLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(searchGroomingInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(searchIcon)
-                    .addGroup(searchGroomingInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(searchGroomingInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(searchGroomingInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addGroup(searchGroomingInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(searchIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(searchGroomingInputTextField)
+                    .addComponent(searchGroomingInputButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         groomingFormPanel.setBackground(new java.awt.Color(245, 250, 250));
@@ -206,13 +205,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
             .addGroup(idGroomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(idGroomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(idGroomingTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
+                    .addComponent(idGroomingTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(idGroomingPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(idGroomingGambar)
                         .addGap(18, 18, 18)
                         .addComponent(idGroomingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 144, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         idGroomingPanelLayout.setVerticalGroup(
@@ -252,13 +251,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
             .addGroup(namaGroomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(namaGroomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(namaHewanDropdown, 0, 302, Short.MAX_VALUE)
+                    .addComponent(namaHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(namaGroomingPanelLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addComponent(namaHewanGambar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(namaHawanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 144, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         namaGroomingPanelLayout.setVerticalGroup(
@@ -297,13 +296,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
             .addGroup(jenisGroomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jenisGroomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jenisGroomingDropdown, 0, 302, Short.MAX_VALUE)
+                    .addComponent(jenisGroomingDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jenisGroomingPanelLayout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addComponent(jenisGroomingGambar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jenisGroomingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 155, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jenisGroomingPanelLayout.setVerticalGroup(
@@ -342,13 +341,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
             .addGroup(hargaGroomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(hargaGroomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(hargaGroomingTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
+                    .addComponent(hargaGroomingTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(hargaGroomingPanelLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(hargaGroomingGambar)
                         .addGap(18, 18, 18)
                         .addComponent(hargaGroomingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 83, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         hargaGroomingPanelLayout.setVerticalGroup(
@@ -683,12 +682,9 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                     .addGroup(card2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(card2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, card2Layout.createSequentialGroup()
-                                .addComponent(card2Text3)
-                                .addContainerGap())
-                            .addGroup(card2Layout.createSequentialGroup()
-                                .addComponent(card2Text2)
-                                .addContainerGap())))
+                            .addComponent(card2Text3, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(card2Text2))
+                        .addContainerGap())
                     .addComponent(card2Text1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         card2Layout.setVerticalGroup(
@@ -763,9 +759,7 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                 .addGroup(card4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(card4Text1)
                     .addComponent(card4Text2)
-                    .addGroup(card4Layout.createSequentialGroup()
-                        .addComponent(card4Text3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                    .addComponent(card4Text3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         card4Layout.setVerticalGroup(
@@ -793,7 +787,7 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(searchGroomingInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                         .addComponent(card1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(card2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -843,14 +837,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1539, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

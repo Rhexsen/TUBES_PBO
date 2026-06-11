@@ -38,24 +38,39 @@ public class MainViewForm extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        sidePanel = new javax.swing.JPanel();
+        navBarPanel = new javax.swing.JPanel();
         logoPanel = new javax.swing.JPanel();
-        logoIcon = new javax.swing.JLabel();
-        logoLabel = new javax.swing.JLabel();
-        dashboardPanel = new javax.swing.JPanel();
-        dashboardLabel = new javax.swing.JLabel();
+        logoIconLabel = new javax.swing.JLabel();
+        petshopLabel = new javax.swing.JLabel();
+        petshopLabel2 = new javax.swing.JLabel();
+        customerPanel = new javax.swing.JPanel();
+        jpanelRoundCustomer = new costum.JpanelRound();
+        customerIconLabel = new javax.swing.JLabel();
+        customerLabel = new javax.swing.JLabel();
         hewanPanel = new javax.swing.JPanel();
+        jpanelRoundHewan = new costum.JpanelRound();
+        hewanIconLabel = new javax.swing.JLabel();
         hewanLabel = new javax.swing.JLabel();
         produkPanel = new javax.swing.JPanel();
+        jpanelRoundProduk = new costum.JpanelRound();
+        produkIconLabel = new javax.swing.JLabel();
         produkLabel = new javax.swing.JLabel();
         groomingPanel = new javax.swing.JPanel();
+        jpanelRoundGrooming = new costum.JpanelRound();
+        groomingIconLabel = new javax.swing.JLabel();
         groomingLabel = new javax.swing.JLabel();
-        penitipanPanel = new javax.swing.JPanel();
-        penitipanLabel = new javax.swing.JLabel();
         adopsiPanel = new javax.swing.JPanel();
+        jpanelRoundAdopsi = new costum.JpanelRound();
+        adopsiIconLabel = new javax.swing.JLabel();
         adopsiLabel = new javax.swing.JLabel();
-        transaksiPanel = new javax.swing.JPanel();
-        transaksiLabel = new javax.swing.JLabel();
+        penitipanPanel = new javax.swing.JPanel();
+        jpanelRoundPenitipan = new costum.JpanelRound();
+        penitipanIconLabel = new javax.swing.JLabel();
+        penitipanLabel = new javax.swing.JLabel();
+        detailPenjualanPanel = new javax.swing.JPanel();
+        jpanelRoundDetailPenjualan = new costum.JpanelRound();
+        detailPenjualanIconLabel = new javax.swing.JLabel();
+        detailPenjualanLabel = new javax.swing.JLabel();
         contentPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -63,87 +78,142 @@ public class MainViewForm extends javax.swing.JFrame {
 
         mainPanel.setPreferredSize(new java.awt.Dimension(1360, 757));
 
-        sidePanel.setBackground(new java.awt.Color(124, 147, 195));
-        sidePanel.setPreferredSize(new java.awt.Dimension(160, 757));
+        navBarPanel.setBackground(new java.awt.Color(124, 147, 195));
+        navBarPanel.setPreferredSize(new java.awt.Dimension(970, 0));
 
         logoPanel.setBackground(new java.awt.Color(124, 147, 195));
-        logoPanel.setPreferredSize(new java.awt.Dimension(140, 120));
 
-        logoIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logoPetShop.png"))); // NOI18N
+        logoIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logoPetshop.png"))); // NOI18N
+        logoIconLabel.setText("jLabel4");
 
-        logoLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 22)); // NOI18N
-        logoLabel.setForeground(new java.awt.Color(245, 245, 245));
-        logoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoLabel.setText("- PetShop -");
+        petshopLabel.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        petshopLabel.setForeground(new java.awt.Color(255, 255, 255));
+        petshopLabel.setText("PETSHOP");
+
+        petshopLabel2.setFont(new java.awt.Font("Perpetua Titling MT", 1, 12)); // NOI18N
+        petshopLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        petshopLabel2.setText("MANAGEMENT SYSTEM");
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
         logoPanelLayout.setHorizontalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(logoPanelLayout.createSequentialGroup()
-                .addGroup(logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(logoPanelLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(logoIcon))
-                    .addGroup(logoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(logoLabel)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(logoIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(petshopLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(petshopLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         logoPanelLayout.setVerticalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(logoPanelLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(logoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logoLabel)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoPanelLayout.createSequentialGroup()
+                .addGroup(logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(logoPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(logoPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(petshopLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, 0)
+                        .addComponent(petshopLabel2)))
+                .addGap(28, 28, 28))
+        );
+
+        customerPanel.setBackground(new java.awt.Color(124, 147, 195));
+        customerPanel.setPreferredSize(new java.awt.Dimension(105, 107));
+
+        jpanelRoundCustomer.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundCustomer.setRoundBottomLeft(20);
+        jpanelRoundCustomer.setRoundBottomRight(20);
+        jpanelRoundCustomer.setRoundTopLeft(20);
+        jpanelRoundCustomer.setRoundTopRight(20);
+
+        customerIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        customerIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/customer.png"))); // NOI18N
+
+        customerLabel.setBackground(new java.awt.Color(0, 0, 0));
+        customerLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        customerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        customerLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        customerLabel.setText("Customer");
+
+        javax.swing.GroupLayout jpanelRoundCustomerLayout = new javax.swing.GroupLayout(jpanelRoundCustomer);
+        jpanelRoundCustomer.setLayout(jpanelRoundCustomerLayout);
+        jpanelRoundCustomerLayout.setHorizontalGroup(
+            jpanelRoundCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundCustomerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(customerIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(customerLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpanelRoundCustomerLayout.setVerticalGroup(
+            jpanelRoundCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundCustomerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(customerIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(customerLabel)
                 .addContainerGap())
         );
 
-        dashboardPanel.setBackground(new java.awt.Color(124, 147, 195));
-        dashboardPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        dashboardPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dashboardPanelMouseClicked(evt);
-            }
-        });
-
-        dashboardLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        dashboardLabel.setForeground(new java.awt.Color(255, 255, 255));
-        dashboardLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        dashboardLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dashboard.png"))); // NOI18N
-        dashboardLabel.setText("Dashboard");
-
-        javax.swing.GroupLayout dashboardPanelLayout = new javax.swing.GroupLayout(dashboardPanel);
-        dashboardPanel.setLayout(dashboardPanelLayout);
-        dashboardPanelLayout.setHorizontalGroup(
-            dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dashboardPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout customerPanelLayout = new javax.swing.GroupLayout(customerPanel);
+        customerPanel.setLayout(customerPanelLayout);
+        customerPanelLayout.setHorizontalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dashboardLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addComponent(jpanelRoundCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        dashboardPanelLayout.setVerticalGroup(
-            dashboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dashboardPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(dashboardLabel)
-                .addContainerGap(20, Short.MAX_VALUE))
+        customerPanelLayout.setVerticalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         hewanPanel.setBackground(new java.awt.Color(124, 147, 195));
-        hewanPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        hewanPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                hewanPanelMouseClicked(evt);
-            }
-        });
+        hewanPanel.setPreferredSize(new java.awt.Dimension(105, 107));
 
-        hewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jpanelRoundHewan.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundHewan.setRoundBottomLeft(20);
+        jpanelRoundHewan.setRoundBottomRight(20);
+        jpanelRoundHewan.setRoundTopLeft(20);
+        jpanelRoundHewan.setRoundTopRight(20);
+
+        hewanIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hewanIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hewan.png"))); // NOI18N
+
+        hewanLabel.setBackground(new java.awt.Color(0, 0, 0));
+        hewanLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         hewanLabel.setForeground(new java.awt.Color(255, 255, 255));
-        hewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        hewanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hewan.png"))); // NOI18N
+        hewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         hewanLabel.setText("Hewan");
+
+        javax.swing.GroupLayout jpanelRoundHewanLayout = new javax.swing.GroupLayout(jpanelRoundHewan);
+        jpanelRoundHewan.setLayout(jpanelRoundHewanLayout);
+        jpanelRoundHewanLayout.setHorizontalGroup(
+            jpanelRoundHewanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundHewanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(hewanIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(hewanLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpanelRoundHewanLayout.setVerticalGroup(
+            jpanelRoundHewanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundHewanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(hewanIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(hewanLabel)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout hewanPanelLayout = new javax.swing.GroupLayout(hewanPanel);
         hewanPanel.setLayout(hewanPanelLayout);
@@ -151,30 +221,54 @@ public class MainViewForm extends javax.swing.JFrame {
             hewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hewanPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(hewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jpanelRoundHewan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         hewanPanelLayout.setVerticalGroup(
             hewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hewanPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(hewanLabel)
-                .addGap(21, 21, 21))
+            .addGroup(hewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundHewan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         produkPanel.setBackground(new java.awt.Color(124, 147, 195));
-        produkPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        produkPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                produkPanelMouseClicked(evt);
-            }
-        });
+        produkPanel.setPreferredSize(new java.awt.Dimension(105, 107));
 
-        produkLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jpanelRoundProduk.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundProduk.setRoundBottomLeft(20);
+        jpanelRoundProduk.setRoundBottomRight(20);
+        jpanelRoundProduk.setRoundTopLeft(20);
+        jpanelRoundProduk.setRoundTopRight(20);
+
+        produkIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        produkIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/produk.png"))); // NOI18N
+
+        produkLabel.setBackground(new java.awt.Color(0, 0, 0));
+        produkLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         produkLabel.setForeground(new java.awt.Color(255, 255, 255));
-        produkLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        produkLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/produk.png"))); // NOI18N
+        produkLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         produkLabel.setText("Produk");
+
+        javax.swing.GroupLayout jpanelRoundProdukLayout = new javax.swing.GroupLayout(jpanelRoundProduk);
+        jpanelRoundProduk.setLayout(jpanelRoundProdukLayout);
+        jpanelRoundProdukLayout.setHorizontalGroup(
+            jpanelRoundProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundProdukLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(produkIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(produkLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpanelRoundProdukLayout.setVerticalGroup(
+            jpanelRoundProdukLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundProdukLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(produkIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(produkLabel)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout produkPanelLayout = new javax.swing.GroupLayout(produkPanel);
         produkPanel.setLayout(produkPanelLayout);
@@ -182,30 +276,54 @@ public class MainViewForm extends javax.swing.JFrame {
             produkPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(produkPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(produkLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(jpanelRoundProduk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         produkPanelLayout.setVerticalGroup(
             produkPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, produkPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(produkLabel)
-                .addGap(21, 21, 21))
+            .addGroup(produkPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundProduk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         groomingPanel.setBackground(new java.awt.Color(124, 147, 195));
-        groomingPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        groomingPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                groomingPanelMouseClicked(evt);
-            }
-        });
+        groomingPanel.setPreferredSize(new java.awt.Dimension(105, 107));
 
-        groomingLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jpanelRoundGrooming.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundGrooming.setRoundBottomLeft(20);
+        jpanelRoundGrooming.setRoundBottomRight(20);
+        jpanelRoundGrooming.setRoundTopLeft(20);
+        jpanelRoundGrooming.setRoundTopRight(20);
+
+        groomingIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        groomingIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/grooming.png"))); // NOI18N
+
+        groomingLabel.setBackground(new java.awt.Color(0, 0, 0));
+        groomingLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         groomingLabel.setForeground(new java.awt.Color(255, 255, 255));
-        groomingLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        groomingLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/grooming.png"))); // NOI18N
+        groomingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         groomingLabel.setText("Grooming");
+
+        javax.swing.GroupLayout jpanelRoundGroomingLayout = new javax.swing.GroupLayout(jpanelRoundGrooming);
+        jpanelRoundGrooming.setLayout(jpanelRoundGroomingLayout);
+        jpanelRoundGroomingLayout.setHorizontalGroup(
+            jpanelRoundGroomingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundGroomingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(groomingIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(groomingLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpanelRoundGroomingLayout.setVerticalGroup(
+            jpanelRoundGroomingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundGroomingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(groomingIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(groomingLabel)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout groomingPanelLayout = new javax.swing.GroupLayout(groomingPanel);
         groomingPanel.setLayout(groomingPanelLayout);
@@ -213,61 +331,54 @@ public class MainViewForm extends javax.swing.JFrame {
             groomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(groomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(groomingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addComponent(jpanelRoundGrooming, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         groomingPanelLayout.setVerticalGroup(
             groomingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingPanelLayout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(groomingLabel)
-                .addGap(21, 21, 21))
-        );
-
-        penitipanPanel.setBackground(new java.awt.Color(124, 147, 195));
-        penitipanPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        penitipanPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                penitipanPanelMouseClicked(evt);
-            }
-        });
-
-        penitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        penitipanLabel.setForeground(new java.awt.Color(255, 255, 255));
-        penitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        penitipanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/penitipan.png"))); // NOI18N
-        penitipanLabel.setText("Penitipan");
-
-        javax.swing.GroupLayout penitipanPanelLayout = new javax.swing.GroupLayout(penitipanPanel);
-        penitipanPanel.setLayout(penitipanPanelLayout);
-        penitipanPanelLayout.setHorizontalGroup(
-            penitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(penitipanPanelLayout.createSequentialGroup()
+            .addGroup(groomingPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(penitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        penitipanPanelLayout.setVerticalGroup(
-            penitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, penitipanPanelLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(penitipanLabel)
-                .addGap(19, 19, 19))
+                .addComponent(jpanelRoundGrooming, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         adopsiPanel.setBackground(new java.awt.Color(124, 147, 195));
-        adopsiPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        adopsiPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                adopsiPanelMouseClicked(evt);
-            }
-        });
+        adopsiPanel.setPreferredSize(new java.awt.Dimension(105, 107));
 
-        adopsiLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jpanelRoundAdopsi.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundAdopsi.setRoundBottomLeft(20);
+        jpanelRoundAdopsi.setRoundBottomRight(20);
+        jpanelRoundAdopsi.setRoundTopLeft(20);
+        jpanelRoundAdopsi.setRoundTopRight(20);
+
+        adopsiIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        adopsiIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adopsi.png"))); // NOI18N
+
+        adopsiLabel.setBackground(new java.awt.Color(0, 0, 0));
+        adopsiLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         adopsiLabel.setForeground(new java.awt.Color(255, 255, 255));
-        adopsiLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        adopsiLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/adopsi.png"))); // NOI18N
+        adopsiLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         adopsiLabel.setText("Adopsi");
+
+        javax.swing.GroupLayout jpanelRoundAdopsiLayout = new javax.swing.GroupLayout(jpanelRoundAdopsi);
+        jpanelRoundAdopsi.setLayout(jpanelRoundAdopsiLayout);
+        jpanelRoundAdopsiLayout.setHorizontalGroup(
+            jpanelRoundAdopsiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundAdopsiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(adopsiIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(adopsiLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpanelRoundAdopsiLayout.setVerticalGroup(
+            jpanelRoundAdopsiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundAdopsiLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(adopsiIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(adopsiLabel)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout adopsiPanelLayout = new javax.swing.GroupLayout(adopsiPanel);
         adopsiPanel.setLayout(adopsiPanelLayout);
@@ -275,93 +386,170 @@ public class MainViewForm extends javax.swing.JFrame {
             adopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adopsiPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(adopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addComponent(jpanelRoundAdopsi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         adopsiPanelLayout.setVerticalGroup(
             adopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, adopsiPanelLayout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addComponent(adopsiLabel)
-                .addGap(19, 19, 19))
-        );
-
-        transaksiPanel.setBackground(new java.awt.Color(124, 147, 195));
-        transaksiPanel.setPreferredSize(new java.awt.Dimension(140, 70));
-        transaksiPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                transaksiPanelMouseClicked(evt);
-            }
-        });
-
-        transaksiLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        transaksiLabel.setForeground(new java.awt.Color(255, 255, 255));
-        transaksiLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        transaksiLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/transaksi.png"))); // NOI18N
-        transaksiLabel.setText("Transaksi");
-
-        javax.swing.GroupLayout transaksiPanelLayout = new javax.swing.GroupLayout(transaksiPanel);
-        transaksiPanel.setLayout(transaksiPanelLayout);
-        transaksiPanelLayout.setHorizontalGroup(
-            transaksiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transaksiPanelLayout.createSequentialGroup()
+            .addGroup(adopsiPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(transaksiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
-        );
-        transaksiPanelLayout.setVerticalGroup(
-            transaksiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(transaksiPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(transaksiLabel)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addComponent(jpanelRoundAdopsi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        javax.swing.GroupLayout sidePanelLayout = new javax.swing.GroupLayout(sidePanel);
-        sidePanel.setLayout(sidePanelLayout);
-        sidePanelLayout.setHorizontalGroup(
-            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sidePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-            .addGroup(sidePanelLayout.createSequentialGroup()
+        penitipanPanel.setBackground(new java.awt.Color(124, 147, 195));
+        penitipanPanel.setPreferredSize(new java.awt.Dimension(105, 107));
+
+        jpanelRoundPenitipan.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundPenitipan.setRoundBottomLeft(20);
+        jpanelRoundPenitipan.setRoundBottomRight(20);
+        jpanelRoundPenitipan.setRoundTopLeft(20);
+        jpanelRoundPenitipan.setRoundTopRight(20);
+
+        penitipanIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        penitipanIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/penitipan.png"))); // NOI18N
+
+        penitipanLabel.setBackground(new java.awt.Color(0, 0, 0));
+        penitipanLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        penitipanLabel.setForeground(new java.awt.Color(255, 255, 255));
+        penitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        penitipanLabel.setText("Penitipan");
+
+        javax.swing.GroupLayout jpanelRoundPenitipanLayout = new javax.swing.GroupLayout(jpanelRoundPenitipan);
+        jpanelRoundPenitipan.setLayout(jpanelRoundPenitipanLayout);
+        jpanelRoundPenitipanLayout.setHorizontalGroup(
+            jpanelRoundPenitipanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundPenitipanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(transaksiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(produkPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(groomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dashboardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(penitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(adopsiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(penitipanIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(penitipanLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        sidePanelLayout.setVerticalGroup(
-            sidePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sidePanelLayout.createSequentialGroup()
-                .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jpanelRoundPenitipanLayout.setVerticalGroup(
+            jpanelRoundPenitipanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundPenitipanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(penitipanIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(dashboardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(penitipanLabel)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout penitipanPanelLayout = new javax.swing.GroupLayout(penitipanPanel);
+        penitipanPanel.setLayout(penitipanPanelLayout);
+        penitipanPanelLayout.setHorizontalGroup(
+            penitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penitipanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundPenitipan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        penitipanPanelLayout.setVerticalGroup(
+            penitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penitipanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundPenitipan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        detailPenjualanPanel.setBackground(new java.awt.Color(124, 147, 195));
+        detailPenjualanPanel.setPreferredSize(new java.awt.Dimension(105, 107));
+
+        jpanelRoundDetailPenjualan.setBackground(new java.awt.Color(190, 205, 238));
+        jpanelRoundDetailPenjualan.setRoundBottomLeft(20);
+        jpanelRoundDetailPenjualan.setRoundBottomRight(20);
+        jpanelRoundDetailPenjualan.setRoundTopLeft(20);
+        jpanelRoundDetailPenjualan.setRoundTopRight(20);
+
+        detailPenjualanIconLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        detailPenjualanIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/detailPenjualan.png"))); // NOI18N
+
+        detailPenjualanLabel.setBackground(new java.awt.Color(0, 0, 0));
+        detailPenjualanLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        detailPenjualanLabel.setForeground(new java.awt.Color(255, 255, 255));
+        detailPenjualanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        detailPenjualanLabel.setText("Detail Penjualan");
+
+        javax.swing.GroupLayout jpanelRoundDetailPenjualanLayout = new javax.swing.GroupLayout(jpanelRoundDetailPenjualan);
+        jpanelRoundDetailPenjualan.setLayout(jpanelRoundDetailPenjualanLayout);
+        jpanelRoundDetailPenjualanLayout.setHorizontalGroup(
+            jpanelRoundDetailPenjualanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundDetailPenjualanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(detailPenjualanIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(detailPenjualanLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
+        );
+        jpanelRoundDetailPenjualanLayout.setVerticalGroup(
+            jpanelRoundDetailPenjualanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpanelRoundDetailPenjualanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(detailPenjualanIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(detailPenjualanLabel)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout detailPenjualanPanelLayout = new javax.swing.GroupLayout(detailPenjualanPanel);
+        detailPenjualanPanel.setLayout(detailPenjualanPanelLayout);
+        detailPenjualanPanelLayout.setHorizontalGroup(
+            detailPenjualanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detailPenjualanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundDetailPenjualan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        detailPenjualanPanelLayout.setVerticalGroup(
+            detailPenjualanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detailPenjualanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jpanelRoundDetailPenjualan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout navBarPanelLayout = new javax.swing.GroupLayout(navBarPanel);
+        navBarPanel.setLayout(navBarPanelLayout);
+        navBarPanelLayout.setHorizontalGroup(
+            navBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(navBarPanelLayout.createSequentialGroup()
+                .addComponent(logoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(57, 57, 57)
+                .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(hewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(produkPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(groomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(penitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(adopsiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(transaksiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(penitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(detailPenjualanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(179, 179, 179))
+        );
+        navBarPanelLayout.setVerticalGroup(
+            navBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(logoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, navBarPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(navBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(detailPenjualanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(penitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(adopsiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(groomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(produkPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(navBarPanelLayout.createSequentialGroup()
+                .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         contentPanel.setBackground(new java.awt.Color(255, 255, 255));
         contentPanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         contentPanel.setOpaque(false);
-        contentPanel.setPreferredSize(new java.awt.Dimension(1190, 757));
+        contentPanel.setPreferredSize(new java.awt.Dimension(1356, 644));
         contentPanel.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
@@ -369,18 +557,17 @@ public class MainViewForm extends javax.swing.JFrame {
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(navBarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1356, Short.MAX_VALUE))
                 .addGap(0, 4, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sidePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(navBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -400,59 +587,6 @@ public class MainViewForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dashboardPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashboardPanelMouseClicked
-        if(selectedIndex == 1) return;
-
-        recolorDefaultSwitchPanel();
-        dashboardPanel.setBackground(new Color(241, 53, 21, 200));
-        setForm(new CustomerMainPanel());
-        selectedIndex = 1;
-    }//GEN-LAST:event_dashboardPanelMouseClicked
-
-    private void hewanPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hewanPanelMouseClicked
-        if(selectedIndex == 2) return;
-
-        recolorDefaultSwitchPanel();
-        hewanPanel.setBackground(new Color(241, 53, 21, 200));
-        setForm(new KendaraanMainPanel());
-        selectedIndex = 2;
-    }//GEN-LAST:event_hewanPanelMouseClicked
-
-    private void transaksiPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_transaksiPanelMouseClicked
-        if(selectedIndex == 3) return;
-
-        recolorDefaultSwitchPanel();
-        transaksiPanel.setBackground(new Color(241, 53, 21, 200));
-        setForm(new TransaksiMainPanel());
-        selectedIndex = 3;
-    }//GEN-LAST:event_transaksiPanelMouseClicked
-
-    private void produkPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produkPanelMouseClicked
-        if(selectedIndex == 4) return;
-
-        recolorDefaultSwitchPanel();
-        produkPanel.setBackground(new Color(241, 53, 21, 200));
-        setForm(new CustomerServiceMainPanel());
-        selectedIndex = 4;
-    }//GEN-LAST:event_produkPanelMouseClicked
-
-    private void groomingPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_groomingPanelMouseClicked
-        if(selectedIndex == 5) return;
-
-        recolorDefaultSwitchPanel();
-        groomingPanel.setBackground(new Color(241, 53, 21, 200));
-        setForm(new GaransiMainPanel());
-        selectedIndex = 5;
-    }//GEN-LAST:event_groomingPanelMouseClicked
-
-    private void penitipanPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_penitipanPanelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_penitipanPanelMouseClicked
-
-    private void adopsiPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_adopsiPanelMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_adopsiPanelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -481,6 +615,12 @@ public class MainViewForm extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -491,25 +631,45 @@ public class MainViewForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel adopsiIconLabel;
     private javax.swing.JLabel adopsiLabel;
     private javax.swing.JPanel adopsiPanel;
     private javax.swing.JPanel contentPanel;
-    private javax.swing.JLabel dashboardLabel;
-    private javax.swing.JPanel dashboardPanel;
+    private javax.swing.JLabel customerIconLabel;
+    private javax.swing.JLabel customerLabel;
+    private javax.swing.JPanel customerPanel;
+    private javax.swing.JLabel detailPenjualanIconLabel;
+    private javax.swing.JLabel detailPenjualanLabel;
+    private javax.swing.JPanel detailPenjualanPanel;
+    private javax.swing.JLabel groomingIconLabel;
     private javax.swing.JLabel groomingLabel;
     private javax.swing.JPanel groomingPanel;
+    private javax.swing.JLabel hewanIconLabel;
     private javax.swing.JLabel hewanLabel;
     private javax.swing.JPanel hewanPanel;
-    private javax.swing.JLabel logoIcon;
-    private javax.swing.JLabel logoLabel;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel3;
+    private costum.JpanelRound jpanelRoundAdopsi;
+    private costum.JpanelRound jpanelRoundCustomer;
+    private costum.JpanelRound jpanelRoundDetailPenjualan;
+    private costum.JpanelRound jpanelRoundGrooming;
+    private costum.JpanelRound jpanelRoundHewan;
+    private costum.JpanelRound jpanelRoundPenitipan;
+    private costum.JpanelRound jpanelRoundProduk;
+    private javax.swing.JLabel logoIconLabel;
     private javax.swing.JPanel logoPanel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel navBarPanel;
+    private javax.swing.JLabel penitipanIconLabel;
     private javax.swing.JLabel penitipanLabel;
     private javax.swing.JPanel penitipanPanel;
+    private javax.swing.JLabel petshopLabel;
+    private javax.swing.JLabel petshopLabel2;
+    private javax.swing.JLabel produkIconLabel;
     private javax.swing.JLabel produkLabel;
     private javax.swing.JPanel produkPanel;
-    private javax.swing.JPanel sidePanel;
-    private javax.swing.JLabel transaksiLabel;
-    private javax.swing.JPanel transaksiPanel;
     // End of variables declaration//GEN-END:variables
 }
