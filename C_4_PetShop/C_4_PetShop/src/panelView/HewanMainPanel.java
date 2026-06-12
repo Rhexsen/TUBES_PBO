@@ -18,55 +18,110 @@ public class HewanMainPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        hewanLabel = new javax.swing.JLabel();
+        hewanManagementPanel = new javax.swing.JPanel();
+        hewanIconLabel = new javax.swing.JLabel();
+        hewanManagementLabel = new javax.swing.JLabel();
+        hewanManagementLabel2 = new javax.swing.JLabel();
         searchHewanInputPanel = new javax.swing.JPanel();
-        searchHewanInputLabel = new javax.swing.JLabel();
+        searchHewanIconLabel = new javax.swing.JLabel();
         searchHewanInputTextField = new javax.swing.JTextField();
         searchHewanInputButton = new javax.swing.JButton();
         hewanFormPanel = new javax.swing.JPanel();
+        dataHewanLabel = new javax.swing.JLabel();
+        idHewanPanel = new javax.swing.JPanel();
+        idHewanLabel = new javax.swing.JLabel();
+        idHewanTextField = new javax.swing.JTextField();
+        namaHewanPanel = new javax.swing.JPanel();
+        namaHewanLabel = new javax.swing.JLabel();
+        namaHewanTextField = new javax.swing.JTextField();
+        jenisHewanPanel = new javax.swing.JPanel();
+        jenisHewanLabel = new javax.swing.JLabel();
+        jenisHewanDropdown = new javax.swing.JComboBox<>();
+        detailHewanPanel = new javax.swing.JPanel();
+        detailHewanLabel = new javax.swing.JLabel();
+        detailHewanTextField = new javax.swing.JTextField();
+        warnaHewanPanel = new javax.swing.JPanel();
+        warnaHewanLabel = new javax.swing.JLabel();
+        warnaHewanTextField = new javax.swing.JTextField();
+        umurHewanPanel = new javax.swing.JPanel();
+        umurHewanLabel = new javax.swing.JLabel();
+        umurHewanTextField = new javax.swing.JTextField();
+        genderHewanPanel = new javax.swing.JPanel();
+        genderHewanLabel = new javax.swing.JLabel();
+        genderHewanDropdown = new javax.swing.JComboBox<>();
+        customerPanel = new javax.swing.JPanel();
+        customerLabel = new javax.swing.JLabel();
+        customerDropdown = new javax.swing.JComboBox<>();
+        statusAdopsiPanel = new javax.swing.JPanel();
+        statusAdopsiLabel = new javax.swing.JLabel();
+        statusAdopsiDropdown = new javax.swing.JComboBox<>();
         hewanButtonPanel = new javax.swing.JPanel();
         barukanHewanButton = new javax.swing.JButton();
         hapusHewanButton = new javax.swing.JButton();
         tambahHewanButton = new javax.swing.JButton();
-        idHewanPanel = new javax.swing.JPanel();
-        idHewanLabel = new javax.swing.JLabel();
-        idHewanTextField = new javax.swing.JTextField();
-        jenisHewanPanel = new javax.swing.JPanel();
-        jenisHewanLabel = new javax.swing.JLabel();
-        jenisHewanDropdown = new javax.swing.JComboBox<>();
-        umurHewanPanel = new javax.swing.JPanel();
-        umurHewanLabel = new javax.swing.JLabel();
-        umurHewanTextField = new javax.swing.JTextField();
-        namaHewanPanel = new javax.swing.JPanel();
-        namaHewanLabel = new javax.swing.JLabel();
-        namaHewanTextField = new javax.swing.JTextField();
-        warnaHewanPanel = new javax.swing.JPanel();
-        warnaHewanLabel = new javax.swing.JLabel();
-        warnaHewanTextField = new javax.swing.JTextField();
-        genderHewanPanel = new javax.swing.JPanel();
-        genderHewanLabel = new javax.swing.JLabel();
-        genderHewanDropdown = new javax.swing.JComboBox<>();
-        statusHewanPanel = new javax.swing.JPanel();
-        statusHewanLabel = new javax.swing.JLabel();
-        statusHewanDropdown = new javax.swing.JComboBox<>();
-        simpanHewanButton = new javax.swing.JButton();
-        batalHewanButton = new javax.swing.JButton();
+        totalHewanPanel = new javax.swing.JPanel();
+        infoTotalHewanPanel = new javax.swing.JPanel();
+        iconHewanLabel = new javax.swing.JLabel();
+        totalHewanLabel = new javax.swing.JLabel();
+        totalLabel = new javax.swing.JLabel();
+        hewanTerdaftarLabel = new javax.swing.JLabel();
         hewanScrollPane = new javax.swing.JScrollPane();
         tableHewan = new javax.swing.JTable();
+        batalHewanButton = new javax.swing.JButton();
+        simpanHewanButton = new javax.swing.JButton();
+
+        setPreferredSize(new java.awt.Dimension(1356, 644));
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        mainPanel.setPreferredSize(new java.awt.Dimension(1356, 644));
 
-        hewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 36)); // NOI18N
-        hewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        hewanLabel.setText("HEWAN");
+        hewanManagementPanel.setBackground(new java.awt.Color(190, 205, 238));
+        hewanManagementPanel.setPreferredSize(new java.awt.Dimension(1356, 99));
+
+        hewanIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hewanManagement.png"))); // NOI18N
+
+        hewanManagementLabel.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        hewanManagementLabel.setText("HEWAN MANAGEMENT");
+
+        hewanManagementLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        hewanManagementLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        hewanManagementLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        hewanManagementLabel2.setText("Kelola Data Hewan PetShop dengan Mudah");
+
+        javax.swing.GroupLayout hewanManagementPanelLayout = new javax.swing.GroupLayout(hewanManagementPanel);
+        hewanManagementPanel.setLayout(hewanManagementPanelLayout);
+        hewanManagementPanelLayout.setHorizontalGroup(
+            hewanManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hewanManagementPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(hewanIconLabel)
+                .addGap(18, 18, 18)
+                .addGroup(hewanManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hewanManagementPanelLayout.createSequentialGroup()
+                        .addComponent(hewanManagementLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(1116, 1116, 1116))
+                    .addGroup(hewanManagementPanelLayout.createSequentialGroup()
+                        .addComponent(hewanManagementLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        hewanManagementPanelLayout.setVerticalGroup(
+            hewanManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hewanManagementPanelLayout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addComponent(hewanManagementLabel)
+                .addGap(0, 0, 0)
+                .addComponent(hewanManagementLabel2)
+                .addGap(25, 25, 25))
+            .addComponent(hewanIconLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         searchHewanInputPanel.setBackground(new java.awt.Color(255, 255, 255));
         searchHewanInputPanel.setPreferredSize(new java.awt.Dimension(687, 65));
 
-        searchHewanInputLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        searchHewanInputLabel.setText("Pencarian Hewan");
+        searchHewanIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
 
-        searchHewanInputTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        searchHewanInputTextField.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        searchHewanInputTextField.setText("Cari Hewan . . .");
         searchHewanInputTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchHewanInputTextFieldActionPerformed(evt);
@@ -94,28 +149,338 @@ public class HewanMainPanel extends javax.swing.JPanel {
             searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchHewanInputPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchHewanInputLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(searchHewanInputPanelLayout.createSequentialGroup()
-                        .addComponent(searchHewanInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(searchHewanInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(searchHewanIconLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(searchHewanInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(searchHewanInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         searchHewanInputPanelLayout.setVerticalGroup(
             searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(searchHewanInputPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(searchHewanInputLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(searchHewanInputTextField)
-                    .addComponent(searchHewanInputButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchHewanInputPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(searchHewanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(searchHewanInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(searchHewanInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(searchHewanIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         hewanFormPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        dataHewanLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        dataHewanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dataHewan.png"))); // NOI18N
+        dataHewanLabel.setText("DATA HEWAN");
+
+        idHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        idHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        idHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        idHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        idHewanLabel.setText("ID Hewan");
+
+        idHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout idHewanPanelLayout = new javax.swing.GroupLayout(idHewanPanel);
+        idHewanPanel.setLayout(idHewanPanelLayout);
+        idHewanPanelLayout.setHorizontalGroup(
+            idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(idHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(idHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(idHewanPanelLayout.createSequentialGroup()
+                        .addComponent(idHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        idHewanPanelLayout.setVerticalGroup(
+            idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, idHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(idHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(idHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        namaHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        namaHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        namaHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        namaHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        namaHewanLabel.setText("Nama Hewan");
+
+        namaHewanTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        namaHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout namaHewanPanelLayout = new javax.swing.GroupLayout(namaHewanPanel);
+        namaHewanPanel.setLayout(namaHewanPanelLayout);
+        namaHewanPanelLayout.setHorizontalGroup(
+            namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(namaHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(namaHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(namaHewanPanelLayout.createSequentialGroup()
+                        .addComponent(namaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 187, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        namaHewanPanelLayout.setVerticalGroup(
+            namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, namaHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(namaHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(namaHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jenisHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jenisHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        jenisHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jenisHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jenisHewanLabel.setText("Jenis Hewan");
+
+        jenisHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        jenisHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
+        jenisHewanDropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jenisHewanDropdownActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jenisHewanPanelLayout = new javax.swing.GroupLayout(jenisHewanPanel);
+        jenisHewanPanel.setLayout(jenisHewanPanelLayout);
+        jenisHewanPanelLayout.setHorizontalGroup(
+            jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jenisHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jenisHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jenisHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jenisHewanPanelLayout.setVerticalGroup(
+            jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jenisHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jenisHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jenisHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        detailHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        detailHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        detailHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        detailHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        detailHewanLabel.setText("Jenis Bulu");
+
+        detailHewanTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        detailHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout detailHewanPanelLayout = new javax.swing.GroupLayout(detailHewanPanel);
+        detailHewanPanel.setLayout(detailHewanPanelLayout);
+        detailHewanPanelLayout.setHorizontalGroup(
+            detailHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(detailHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(detailHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(detailHewanPanelLayout.createSequentialGroup()
+                        .addComponent(detailHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 187, Short.MAX_VALUE))
+                    .addComponent(detailHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        detailHewanPanelLayout.setVerticalGroup(
+            detailHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, detailHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(detailHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(detailHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        warnaHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        warnaHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        warnaHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        warnaHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        warnaHewanLabel.setText("Warna Hewan");
+
+        warnaHewanTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        warnaHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout warnaHewanPanelLayout = new javax.swing.GroupLayout(warnaHewanPanel);
+        warnaHewanPanel.setLayout(warnaHewanPanelLayout);
+        warnaHewanPanelLayout.setHorizontalGroup(
+            warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(warnaHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(warnaHewanPanelLayout.createSequentialGroup()
+                        .addComponent(warnaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 187, Short.MAX_VALUE))
+                    .addComponent(warnaHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        warnaHewanPanelLayout.setVerticalGroup(
+            warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, warnaHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(warnaHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(warnaHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        umurHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        umurHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        umurHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        umurHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        umurHewanLabel.setText("Umur Hewan (Tahun)");
+
+        umurHewanTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        umurHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout umurHewanPanelLayout = new javax.swing.GroupLayout(umurHewanPanel);
+        umurHewanPanel.setLayout(umurHewanPanelLayout);
+        umurHewanPanelLayout.setHorizontalGroup(
+            umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(umurHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(umurHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(umurHewanPanelLayout.createSequentialGroup()
+                        .addComponent(umurHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 167, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        umurHewanPanelLayout.setVerticalGroup(
+            umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, umurHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(umurHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(umurHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        genderHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+        genderHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        genderHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        genderHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        genderHewanLabel.setText("Gender");
+
+        genderHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        genderHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
+        genderHewanDropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genderHewanDropdownActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout genderHewanPanelLayout = new javax.swing.GroupLayout(genderHewanPanel);
+        genderHewanPanel.setLayout(genderHewanPanelLayout);
+        genderHewanPanelLayout.setHorizontalGroup(
+            genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(genderHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(genderHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(genderHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        genderHewanPanelLayout.setVerticalGroup(
+            genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, genderHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(genderHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(genderHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        customerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        customerPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        customerLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        customerLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        customerLabel.setText("Customer");
+
+        customerDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        customerDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
+        customerDropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerDropdownActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout customerPanelLayout = new javax.swing.GroupLayout(customerPanel);
+        customerPanel.setLayout(customerPanelLayout);
+        customerPanelLayout.setHorizontalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(customerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(customerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        customerPanelLayout.setVerticalGroup(
+            customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(customerLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(customerDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        statusAdopsiPanel.setBackground(new java.awt.Color(255, 255, 255));
+        statusAdopsiPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        statusAdopsiLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        statusAdopsiLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        statusAdopsiLabel.setText("Status Adopsi");
+
+        statusAdopsiDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        statusAdopsiDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
+        statusAdopsiDropdown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statusAdopsiDropdownActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout statusAdopsiPanelLayout = new javax.swing.GroupLayout(statusAdopsiPanel);
+        statusAdopsiPanel.setLayout(statusAdopsiPanelLayout);
+        statusAdopsiPanelLayout.setHorizontalGroup(
+            statusAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusAdopsiPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(statusAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statusAdopsiLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statusAdopsiDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        statusAdopsiPanelLayout.setVerticalGroup(
+            statusAdopsiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusAdopsiPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusAdopsiLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(statusAdopsiDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         hewanButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -157,10 +522,10 @@ public class HewanMainPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(tambahHewanButton)
                 .addGap(18, 18, 18)
-                .addComponent(barukanHewanButton)
+                .addComponent(barukanHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(hapusHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(hapusHewanButton, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                .addContainerGap())
         );
         hewanButtonPanelLayout.setVerticalGroup(
             hewanButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,259 +538,6 @@ public class HewanMainPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        idHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        idHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        idHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        idHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        idHewanLabel.setText("ID Hewan");
-
-        idHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-
-        javax.swing.GroupLayout idHewanPanelLayout = new javax.swing.GroupLayout(idHewanPanel);
-        idHewanPanel.setLayout(idHewanPanelLayout);
-        idHewanPanelLayout.setHorizontalGroup(
-            idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(idHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(idHewanPanelLayout.createSequentialGroup()
-                        .addComponent(idHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(idHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        idHewanPanelLayout.setVerticalGroup(
-            idHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, idHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(idHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(idHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jenisHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        jenisHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        jenisHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        jenisHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jenisHewanLabel.setText("Jenis Hewan");
-
-        jenisHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        jenisHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
-        jenisHewanDropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jenisHewanDropdownActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jenisHewanPanelLayout = new javax.swing.GroupLayout(jenisHewanPanel);
-        jenisHewanPanel.setLayout(jenisHewanPanelLayout);
-        jenisHewanPanelLayout.setHorizontalGroup(
-            jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jenisHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jenisHewanPanelLayout.createSequentialGroup()
-                        .addComponent(jenisHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(jenisHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jenisHewanPanelLayout.setVerticalGroup(
-            jenisHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jenisHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jenisHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jenisHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        umurHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        umurHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        umurHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        umurHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        umurHewanLabel.setText("Umur Hewan");
-
-        umurHewanTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        umurHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-
-        javax.swing.GroupLayout umurHewanPanelLayout = new javax.swing.GroupLayout(umurHewanPanel);
-        umurHewanPanel.setLayout(umurHewanPanelLayout);
-        umurHewanPanelLayout.setHorizontalGroup(
-            umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(umurHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(umurHewanPanelLayout.createSequentialGroup()
-                        .addComponent(umurHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(umurHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        umurHewanPanelLayout.setVerticalGroup(
-            umurHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, umurHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(umurHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(umurHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        namaHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        namaHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        namaHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        namaHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        namaHewanLabel.setText("Nama Hewan");
-
-        namaHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-        namaHewanTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                namaHewanTextFieldActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout namaHewanPanelLayout = new javax.swing.GroupLayout(namaHewanPanel);
-        namaHewanPanel.setLayout(namaHewanPanelLayout);
-        namaHewanPanelLayout.setHorizontalGroup(
-            namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(namaHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(namaHewanPanelLayout.createSequentialGroup()
-                        .addComponent(namaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 120, Short.MAX_VALUE))
-                    .addComponent(namaHewanTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        namaHewanPanelLayout.setVerticalGroup(
-            namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, namaHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(namaHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(namaHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        warnaHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        warnaHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        warnaHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        warnaHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        warnaHewanLabel.setText("Warna Hewan");
-
-        warnaHewanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-        warnaHewanTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                warnaHewanTextFieldActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout warnaHewanPanelLayout = new javax.swing.GroupLayout(warnaHewanPanel);
-        warnaHewanPanel.setLayout(warnaHewanPanelLayout);
-        warnaHewanPanelLayout.setHorizontalGroup(
-            warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(warnaHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(warnaHewanPanelLayout.createSequentialGroup()
-                        .addComponent(warnaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(warnaHewanTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        warnaHewanPanelLayout.setVerticalGroup(
-            warnaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, warnaHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(warnaHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(warnaHewanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        genderHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        genderHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        genderHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        genderHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        genderHewanLabel.setText("Gender Hewan");
-
-        genderHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        genderHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
-        genderHewanDropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                genderHewanDropdownActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout genderHewanPanelLayout = new javax.swing.GroupLayout(genderHewanPanel);
-        genderHewanPanel.setLayout(genderHewanPanelLayout);
-        genderHewanPanelLayout.setHorizontalGroup(
-            genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(genderHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(genderHewanPanelLayout.createSequentialGroup()
-                        .addComponent(genderHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(genderHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        genderHewanPanelLayout.setVerticalGroup(
-            genderHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, genderHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(genderHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(genderHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        statusHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        statusHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        statusHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        statusHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        statusHewanLabel.setText("Status");
-
-        statusHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        statusHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
-        statusHewanDropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statusHewanDropdownActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout statusHewanPanelLayout = new javax.swing.GroupLayout(statusHewanPanel);
-        statusHewanPanel.setLayout(statusHewanPanelLayout);
-        statusHewanPanelLayout.setHorizontalGroup(
-            statusHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(statusHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusHewanPanelLayout.createSequentialGroup()
-                        .addComponent(statusHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(statusHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        statusHewanPanelLayout.setVerticalGroup(
-            statusHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusHewanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusHewanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statusHewanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         javax.swing.GroupLayout hewanFormPanelLayout = new javax.swing.GroupLayout(hewanFormPanel);
         hewanFormPanel.setLayout(hewanFormPanelLayout);
         hewanFormPanelLayout.setHorizontalGroup(
@@ -433,64 +545,118 @@ public class HewanMainPanel extends javax.swing.JPanel {
             .addGroup(hewanFormPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dataHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(hewanFormPanelLayout.createSequentialGroup()
-                        .addComponent(hewanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jenisHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(umurHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(statusAdopsiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(hewanFormPanelLayout.createSequentialGroup()
+                        .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(namaHewanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(idHewanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jenisHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(umurHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(warnaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(hewanFormPanelLayout.createSequentialGroup()
-                                .addComponent(namaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(29, 29, 29)
-                                .addComponent(statusHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(genderHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 206, Short.MAX_VALUE))))
+                                .addComponent(detailHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(genderHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(hewanFormPanelLayout.createSequentialGroup()
+                                .addComponent(warnaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(hewanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         hewanFormPanelLayout.setVerticalGroup(
             hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(hewanFormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(hewanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dataHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(idHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(namaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(statusHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(idHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(detailHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(genderHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
+                .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(namaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(warnaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(5, 5, 5)
                 .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jenisHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(warnaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(hewanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(umurHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(genderHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(umurHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statusAdopsiPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(hewanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 16, Short.MAX_VALUE))
         );
 
-        simpanHewanButton.setBackground(new java.awt.Color(51, 178, 73));
-        simpanHewanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        simpanHewanButton.setForeground(new java.awt.Color(255, 255, 255));
-        simpanHewanButton.setText("Simpan");
-        simpanHewanButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simpanHewanButtonActionPerformed(evt);
-            }
-        });
+        totalHewanPanel.setBackground(new java.awt.Color(238, 242, 250));
 
-        batalHewanButton.setBackground(new java.awt.Color(237, 8, 0));
-        batalHewanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        batalHewanButton.setForeground(new java.awt.Color(255, 255, 255));
-        batalHewanButton.setText("Batalkan");
-        batalHewanButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                batalHewanButtonActionPerformed(evt);
-            }
-        });
+        infoTotalHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        iconHewanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/hewanTerdaftar.png"))); // NOI18N
+
+        totalHewanLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        totalHewanLabel.setText("Total Hewan");
+
+        totalLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        totalLabel.setText("0");
+
+        hewanTerdaftarLabel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        hewanTerdaftarLabel.setText("Hewan Terdaftar");
+
+        javax.swing.GroupLayout infoTotalHewanPanelLayout = new javax.swing.GroupLayout(infoTotalHewanPanel);
+        infoTotalHewanPanel.setLayout(infoTotalHewanPanelLayout);
+        infoTotalHewanPanelLayout.setHorizontalGroup(
+            infoTotalHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infoTotalHewanPanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(iconHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(infoTotalHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoTotalHewanPanelLayout.createSequentialGroup()
+                        .addComponent(hewanTerdaftarLabel)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoTotalHewanPanelLayout.createSequentialGroup()
+                        .addComponent(totalHewanLabel)
+                        .addGap(38, 38, 38))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoTotalHewanPanelLayout.createSequentialGroup()
+                        .addComponent(totalLabel)
+                        .addGap(76, 76, 76))))
+        );
+        infoTotalHewanPanelLayout.setVerticalGroup(
+            infoTotalHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infoTotalHewanPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(totalHewanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(totalLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hewanTerdaftarLabel)
+                .addGap(18, 18, 18))
+            .addComponent(iconHewanLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout totalHewanPanelLayout = new javax.swing.GroupLayout(totalHewanPanel);
+        totalHewanPanel.setLayout(totalHewanPanelLayout);
+        totalHewanPanelLayout.setHorizontalGroup(
+            totalHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(totalHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(infoTotalHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        totalHewanPanelLayout.setVerticalGroup(
+            totalHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(totalHewanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(infoTotalHewanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         hewanScrollPane.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -512,51 +678,82 @@ public class HewanMainPanel extends javax.swing.JPanel {
         });
         hewanScrollPane.setViewportView(tableHewan);
 
+        batalHewanButton.setBackground(new java.awt.Color(237, 8, 0));
+        batalHewanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        batalHewanButton.setForeground(new java.awt.Color(255, 255, 255));
+        batalHewanButton.setText("Batalkan");
+        batalHewanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                batalHewanButtonActionPerformed(evt);
+            }
+        });
+
+        simpanHewanButton.setBackground(new java.awt.Color(51, 178, 73));
+        simpanHewanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        simpanHewanButton.setForeground(new java.awt.Color(255, 255, 255));
+        simpanHewanButton.setText("Simpan");
+        simpanHewanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                simpanHewanButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(hewanManagementPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1772, Short.MAX_VALUE)
+            .addComponent(searchHewanInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1772, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(hewanScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(simpanHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(batalHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(166, 166, 166))
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchHewanInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1240, Short.MAX_VALUE)
-                    .addComponent(hewanScrollPane)
-                    .addComponent(hewanFormPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(simpanHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(batalHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-            .addComponent(hewanLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hewanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(totalHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(hewanLabel)
-                .addGap(18, 18, 18)
-                .addComponent(searchHewanInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(hewanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(simpanHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(batalHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(hewanScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 284, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(hewanManagementPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchHewanInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hewanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(totalHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(batalHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(simpanHewanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(122, 122, 122))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hewanScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -588,10 +785,6 @@ public class HewanMainPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_searchHewanInputTextFieldActionPerformed
 
-    private void jenisHewanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisHewanDropdownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jenisHewanDropdownActionPerformed
-
     private void batalHewanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalHewanButtonActionPerformed
         
     }//GEN-LAST:event_batalHewanButtonActionPerformed
@@ -600,37 +793,50 @@ public class HewanMainPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_tableHewanMouseClicked
 
-    private void namaHewanTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaHewanTextFieldActionPerformed
+    private void jenisHewanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jenisHewanDropdownActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_namaHewanTextFieldActionPerformed
-
-    private void warnaHewanTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_warnaHewanTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_warnaHewanTextFieldActionPerformed
+    }//GEN-LAST:event_jenisHewanDropdownActionPerformed
 
     private void genderHewanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderHewanDropdownActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_genderHewanDropdownActionPerformed
 
-    private void statusHewanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusHewanDropdownActionPerformed
+    private void statusAdopsiDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusAdopsiDropdownActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_statusHewanDropdownActionPerformed
+    }//GEN-LAST:event_statusAdopsiDropdownActionPerformed
+
+    private void customerDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerDropdownActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_customerDropdownActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton barukanHewanButton;
     private javax.swing.JButton batalHewanButton;
+    private javax.swing.JComboBox<KendaraanE> customerDropdown;
+    private javax.swing.JLabel customerLabel;
+    private javax.swing.JPanel customerPanel;
+    private javax.swing.JLabel dataHewanLabel;
+    private javax.swing.JLabel detailHewanLabel;
+    private javax.swing.JPanel detailHewanPanel;
+    private javax.swing.JTextField detailHewanTextField;
     private javax.swing.JComboBox<KendaraanE> genderHewanDropdown;
     private javax.swing.JLabel genderHewanLabel;
     private javax.swing.JPanel genderHewanPanel;
     private javax.swing.JButton hapusHewanButton;
     private javax.swing.JPanel hewanButtonPanel;
     private javax.swing.JPanel hewanFormPanel;
-    private javax.swing.JLabel hewanLabel;
+    private javax.swing.JLabel hewanIconLabel;
+    private javax.swing.JLabel hewanManagementLabel;
+    private javax.swing.JLabel hewanManagementLabel2;
+    private javax.swing.JPanel hewanManagementPanel;
     private javax.swing.JScrollPane hewanScrollPane;
+    private javax.swing.JLabel hewanTerdaftarLabel;
+    private javax.swing.JLabel iconHewanLabel;
     private javax.swing.JLabel idHewanLabel;
     private javax.swing.JPanel idHewanPanel;
     private javax.swing.JTextField idHewanTextField;
+    private javax.swing.JPanel infoTotalHewanPanel;
     private javax.swing.JComboBox<KendaraanE> jenisHewanDropdown;
     private javax.swing.JLabel jenisHewanLabel;
     private javax.swing.JPanel jenisHewanPanel;
@@ -638,16 +844,19 @@ public class HewanMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel namaHewanLabel;
     private javax.swing.JPanel namaHewanPanel;
     private javax.swing.JTextField namaHewanTextField;
+    private javax.swing.JLabel searchHewanIconLabel;
     private javax.swing.JButton searchHewanInputButton;
-    private javax.swing.JLabel searchHewanInputLabel;
     private javax.swing.JPanel searchHewanInputPanel;
     private javax.swing.JTextField searchHewanInputTextField;
     private javax.swing.JButton simpanHewanButton;
-    private javax.swing.JComboBox<KendaraanE> statusHewanDropdown;
-    private javax.swing.JLabel statusHewanLabel;
-    private javax.swing.JPanel statusHewanPanel;
+    private javax.swing.JComboBox<KendaraanE> statusAdopsiDropdown;
+    private javax.swing.JLabel statusAdopsiLabel;
+    private javax.swing.JPanel statusAdopsiPanel;
     private javax.swing.JTable tableHewan;
     private javax.swing.JButton tambahHewanButton;
+    private javax.swing.JLabel totalHewanLabel;
+    private javax.swing.JPanel totalHewanPanel;
+    private javax.swing.JLabel totalLabel;
     private javax.swing.JLabel umurHewanLabel;
     private javax.swing.JPanel umurHewanPanel;
     private javax.swing.JTextField umurHewanTextField;
