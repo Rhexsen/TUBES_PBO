@@ -48,17 +48,17 @@ public class GroomingMainPanel extends javax.swing.JPanel {
         tanggalGroomingLabel = new javax.swing.JLabel();
         tanggalDateChooser = new com.toedter.calendar.JDateChooser();
         logoTanggalGrooming = new javax.swing.JLabel();
-        groomingButtonPanel = new javax.swing.JPanel();
-        barukanGroomingButton = new javax.swing.JButton();
-        tambahGroomingButton = new javax.swing.JButton();
-        barukanGroomingButton1 = new javax.swing.JButton();
-        barukanGroomingButton2 = new javax.swing.JButton();
         gambarDataGrooming = new javax.swing.JLabel();
         textDataGrooming = new javax.swing.JLabel();
         logoDataGrooming = new javax.swing.JLabel();
         kataAjakan = new javax.swing.JPanel();
         kataAjakanText = new javax.swing.JLabel();
         kataAjakanGambar = new javax.swing.JLabel();
+        groomingButtonPanel = new javax.swing.JPanel();
+        barukanGroomingButton = new javax.swing.JButton();
+        tambahGroomingButton = new javax.swing.JButton();
+        barukanGroomingButton1 = new javax.swing.JButton();
+        barukanGroomingButton2 = new javax.swing.JButton();
         simpanGroomingButton = new javax.swing.JButton();
         batalGroomingButton = new javax.swing.JButton();
         groomingScrollPane = new javax.swing.JScrollPane();
@@ -84,6 +84,7 @@ public class GroomingMainPanel extends javax.swing.JPanel {
         gambarCard4 = new javax.swing.JLabel();
 
         mainPanel.setBackground(new java.awt.Color(232, 248, 242));
+        mainPanel.setPreferredSize(new java.awt.Dimension(1356, 644));
 
         judulGrooming.setBackground(new java.awt.Color(102, 194, 183));
 
@@ -401,6 +402,45 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        gambarDataGrooming.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/grooming2.png"))); // NOI18N
+
+        textDataGrooming.setBackground(new java.awt.Color(232, 248, 242));
+        textDataGrooming.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        textDataGrooming.setText("Data Grooming");
+
+        logoDataGrooming.setBackground(new java.awt.Color(232, 248, 242));
+        logoDataGrooming.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/paws.png"))); // NOI18N
+
+        kataAjakan.setBackground(new java.awt.Color(255, 255, 255));
+
+        kataAjakanText.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
+        kataAjakanText.setText("Berikan perawatan terbaik agar hewan peliharaan tetap sehat, bersih, dan bahagia.");
+
+        kataAjakanGambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/senangPet.png"))); // NOI18N
+
+        javax.swing.GroupLayout kataAjakanLayout = new javax.swing.GroupLayout(kataAjakan);
+        kataAjakan.setLayout(kataAjakanLayout);
+        kataAjakanLayout.setHorizontalGroup(
+            kataAjakanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kataAjakanLayout.createSequentialGroup()
+                .addGap(0, 14, Short.MAX_VALUE)
+                .addComponent(kataAjakanGambar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(kataAjakanText)
+                .addGap(8, 8, 8))
+        );
+        kataAjakanLayout.setVerticalGroup(
+            kataAjakanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kataAjakanLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(kataAjakanText)
+                .addGap(25, 25, 25))
+            .addGroup(kataAjakanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(kataAjakanGambar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         groomingButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         barukanGroomingButton.setBackground(new java.awt.Color(255, 189, 3));
@@ -473,79 +513,40 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        gambarDataGrooming.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/grooming2.png"))); // NOI18N
-
-        textDataGrooming.setBackground(new java.awt.Color(232, 248, 242));
-        textDataGrooming.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
-        textDataGrooming.setText("Data Grooming");
-
-        logoDataGrooming.setBackground(new java.awt.Color(232, 248, 242));
-        logoDataGrooming.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/paws.png"))); // NOI18N
-
-        kataAjakan.setBackground(new java.awt.Color(232, 248, 242));
-
-        kataAjakanText.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 11)); // NOI18N
-        kataAjakanText.setText("Berikan perawatan terbaik agar hewan peliharaan tetap sehat, bersih, dan bahagia.");
-
-        kataAjakanGambar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/senangPet.png"))); // NOI18N
-
-        javax.swing.GroupLayout kataAjakanLayout = new javax.swing.GroupLayout(kataAjakan);
-        kataAjakan.setLayout(kataAjakanLayout);
-        kataAjakanLayout.setHorizontalGroup(
-            kataAjakanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kataAjakanLayout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
-                .addComponent(kataAjakanGambar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(kataAjakanText)
-                .addGap(8, 8, 8))
-        );
-        kataAjakanLayout.setVerticalGroup(
-            kataAjakanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(kataAjakanLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(kataAjakanText)
-                .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(kataAjakanLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(kataAjakanGambar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout groomingFormPanelLayout = new javax.swing.GroupLayout(groomingFormPanel);
         groomingFormPanel.setLayout(groomingFormPanelLayout);
         groomingFormPanelLayout.setHorizontalGroup(
             groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(groomingFormPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(logoDataGrooming)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textDataGrooming)
+                .addGap(0, 0, 0))
+            .addGroup(groomingFormPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(groomingFormPanelLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(namaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91)
+                        .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hargaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tanggalGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(groomingFormPanelLayout.createSequentialGroup()
+                        .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingFormPanelLayout.createSequentialGroup()
+                                .addComponent(groomingButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(58, 58, 58))
                             .addGroup(groomingFormPanelLayout.createSequentialGroup()
                                 .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(idGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(namaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(29, 29, 29)
-                                .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(hargaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tanggalGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(groomingButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jenisGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingFormPanelLayout.createSequentialGroup()
-                                .addComponent(gambarDataGrooming)
-                                .addGap(87, 87, 87))))
-                    .addGroup(groomingFormPanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(logoDataGrooming)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textDataGrooming)))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(groomingFormPanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(kataAjakan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(kataAjakan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jenisGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(gambarDataGrooming)
+                        .addGap(175, 175, 175))))
         );
         groomingFormPanelLayout.setVerticalGroup(
             groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -554,28 +555,30 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                     .addGroup(groomingFormPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(logoDataGrooming)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingFormPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(textDataGrooming)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(idGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(hargaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jenisGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGap(31, 31, 31))
                     .addGroup(groomingFormPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(textDataGrooming)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(groomingFormPanelLayout.createSequentialGroup()
+                        .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hargaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(groomingFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tanggalGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(namaGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jenisGroomingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(groomingButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addComponent(kataAjakan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groomingFormPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(groomingButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(gambarDataGrooming))
-                .addGap(18, 18, 18)
-                .addComponent(kataAjakan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 29, Short.MAX_VALUE))
+                        .addComponent(gambarDataGrooming)
+                        .addGap(33, 33, 33))))
         );
 
         simpanGroomingButton.setBackground(new java.awt.Color(51, 178, 73));
@@ -782,12 +785,13 @@ public class GroomingMainPanel extends javax.swing.JPanel {
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(judulGrooming, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(searchGroomingInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(card1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(card2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -795,19 +799,16 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                         .addComponent(card3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(card4, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(groomingFormPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(groomingFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 783, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
+                                .addComponent(simpanGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(batalGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(groomingScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(simpanGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(batalGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89))
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(groomingScrollPane)
-                .addContainerGap())
-            .addComponent(judulGrooming, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -823,14 +824,15 @@ public class GroomingMainPanel extends javax.swing.JPanel {
                             .addComponent(card2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(card4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(groomingFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(batalGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(simpanGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(groomingScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-                .addGap(861, 861, 861))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(groomingFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(batalGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(simpanGroomingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(groomingScrollPane))
+                .addGap(926, 926, 926))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -838,12 +840,12 @@ public class GroomingMainPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1367, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1539, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 644, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

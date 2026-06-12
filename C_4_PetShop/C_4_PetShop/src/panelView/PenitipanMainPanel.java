@@ -18,7 +18,6 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        penitipanLabel = new javax.swing.JLabel();
         searchPenitipanInputPanel = new javax.swing.JPanel();
         searchPenitipanInputLabel = new javax.swing.JLabel();
         searchPenitipanInputTextField = new javax.swing.JTextField();
@@ -26,17 +25,14 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
         penitipanFormPanel = new javax.swing.JPanel();
         penitipanButtonPanel = new javax.swing.JPanel();
         barukanPenitipanButton = new javax.swing.JButton();
-        hapusPenitipanButton = new javax.swing.JButton();
         tambahPenitipanButton = new javax.swing.JButton();
+        hapusPenitipanButton = new javax.swing.JButton();
         idPenitipanPanel = new javax.swing.JPanel();
         idPenitipanLabel = new javax.swing.JLabel();
         idPenitipanTextField = new javax.swing.JTextField();
         namaPemilikPanel = new javax.swing.JPanel();
         namaPemilikLabel = new javax.swing.JLabel();
         namaPemilikTextField = new javax.swing.JTextField();
-        noTeleponPanel = new javax.swing.JPanel();
-        noTeleponLabel = new javax.swing.JLabel();
-        noTeleponTextField = new javax.swing.JTextField();
         namaHewanPanel = new javax.swing.JPanel();
         namaHewanLabel = new javax.swing.JLabel();
         namaHewanDropdown = new javax.swing.JComboBox<>();
@@ -46,35 +42,30 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
         tanggalKeluarPanel = new javax.swing.JPanel();
         tanggalKeluarLabel = new javax.swing.JLabel();
         tanggalKeluarJDateChooser = new com.toedter.calendar.JDateChooser();
-        durasiPenitipanPanel = new javax.swing.JPanel();
-        durasiPenitipanLabel = new javax.swing.JLabel();
-        durasiPenitipanTextField = new javax.swing.JTextField();
         biayaPenitipanPanel = new javax.swing.JPanel();
         biayaPenitipanLabel = new javax.swing.JLabel();
         biayaPenitipanTextField = new javax.swing.JTextField();
-        statusPenitipanPanel = new javax.swing.JPanel();
-        statusPenitipanLabel = new javax.swing.JLabel();
-        statusPenitipanDropdown = new javax.swing.JComboBox<>();
-        catatanPenitipanPanel = new javax.swing.JPanel();
-        catatanPenitipanLabel = new javax.swing.JLabel();
-        catatanPenitipanScrollPane = new javax.swing.JScrollPane();
-        deskripsiProdukTextArea = new javax.swing.JTextArea();
-        simpanPenitipanButton = new javax.swing.JButton();
         batalPenitipanButton = new javax.swing.JButton();
-        penitipanScrollPane = new javax.swing.JScrollPane();
-        tablePenitipan = new javax.swing.JTable();
+        simpanPenitipanButton = new javax.swing.JButton();
+        headerPenitipanPanel = new javax.swing.JPanel();
+        headerPenitipanLabel = new javax.swing.JLabel();
+        dataPenitiapanPanel = new javax.swing.JPanel();
+        dataPenitipanScrollPane = new javax.swing.JScrollPane();
+        tableCustomer = new javax.swing.JTable();
+        dataPenitipanLabel = new javax.swing.JLabel();
+        informasiPenitipanPanel = new javax.swing.JPanel();
+        gambarKucingPenitipan = new javax.swing.JLabel();
+        gambarAnjingPenitipan = new javax.swing.JLabel();
+        catPenitipanLabel = new javax.swing.JLabel();
+        dogPenitipanLabel = new javax.swing.JLabel();
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        penitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 36)); // NOI18N
-        penitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        penitipanLabel.setText("PENITIPAN");
-
-        searchPenitipanInputPanel.setBackground(new java.awt.Color(255, 255, 255));
+        searchPenitipanInputPanel.setBackground(new java.awt.Color(238, 242, 250));
+        searchPenitipanInputPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pencaran Penitipan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Berlin Sans FB Demi", 0, 12))); // NOI18N
         searchPenitipanInputPanel.setPreferredSize(new java.awt.Dimension(687, 65));
 
         searchPenitipanInputLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        searchPenitipanInputLabel.setText("Pencarian Penitipan");
 
         searchPenitipanInputTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         searchPenitipanInputTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -110,24 +101,23 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
                         .addComponent(searchPenitipanInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(searchPenitipanInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 556, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         searchPenitipanInputPanelLayout.setVerticalGroup(
             searchPenitipanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchPenitipanInputPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(searchPenitipanInputLabel)
+                .addGroup(searchPenitipanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(searchPenitipanInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchPenitipanInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(searchPenitipanInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(searchPenitipanInputTextField)
-                    .addComponent(searchPenitipanInputButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
+                .addComponent(searchPenitipanInputLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        penitipanFormPanel.setBackground(new java.awt.Color(255, 255, 255));
+        penitipanFormPanel.setBackground(new java.awt.Color(238, 242, 250));
+        penitipanFormPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pengisian Data Penitipan", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Berlin Sans FB Demi", 1, 12))); // NOI18N
 
-        penitipanButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
+        penitipanButtonPanel.setBackground(new java.awt.Color(124, 147, 195));
 
         barukanPenitipanButton.setBackground(new java.awt.Color(255, 189, 3));
         barukanPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
@@ -136,16 +126,6 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
         barukanPenitipanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 barukanPenitipanButtonActionPerformed(evt);
-            }
-        });
-
-        hapusPenitipanButton.setBackground(new java.awt.Color(237, 8, 0));
-        hapusPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        hapusPenitipanButton.setForeground(new java.awt.Color(255, 255, 255));
-        hapusPenitipanButton.setText("Hapus");
-        hapusPenitipanButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hapusPenitipanButtonActionPerformed(evt);
             }
         });
 
@@ -159,28 +139,38 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
             }
         });
 
+        hapusPenitipanButton.setBackground(new java.awt.Color(237, 8, 0));
+        hapusPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        hapusPenitipanButton.setForeground(new java.awt.Color(255, 255, 255));
+        hapusPenitipanButton.setText("Hapus");
+        hapusPenitipanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hapusPenitipanButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout penitipanButtonPanelLayout = new javax.swing.GroupLayout(penitipanButtonPanel);
         penitipanButtonPanel.setLayout(penitipanButtonPanelLayout);
         penitipanButtonPanelLayout.setHorizontalGroup(
             penitipanButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(penitipanButtonPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tambahPenitipanButton)
-                .addGap(18, 18, 18)
-                .addComponent(barukanPenitipanButton)
-                .addGap(18, 18, 18)
-                .addComponent(hapusPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addGroup(penitipanButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(barukanPenitipanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(hapusPenitipanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tambahPenitipanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         penitipanButtonPanelLayout.setVerticalGroup(
             penitipanButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(penitipanButtonPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(penitipanButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(barukanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tambahPenitipanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(hapusPenitipanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(tambahPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(barukanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(hapusPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
         );
 
         idPenitipanPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -218,7 +208,7 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
 
         namaPemilikLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         namaPemilikLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        namaPemilikLabel.setText("Nama Pemilik");
+        namaPemilikLabel.setText("ID Customer");
 
         namaPemilikTextField.setPreferredSize(new java.awt.Dimension(72, 21));
 
@@ -243,43 +233,12 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        noTeleponPanel.setBackground(new java.awt.Color(255, 255, 255));
-        noTeleponPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        noTeleponLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        noTeleponLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        noTeleponLabel.setText("No Telepon");
-
-        noTeleponTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        noTeleponTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-
-        javax.swing.GroupLayout noTeleponPanelLayout = new javax.swing.GroupLayout(noTeleponPanel);
-        noTeleponPanel.setLayout(noTeleponPanelLayout);
-        noTeleponPanelLayout.setHorizontalGroup(
-            noTeleponPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(noTeleponPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(noTeleponPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(noTeleponLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(noTeleponTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        noTeleponPanelLayout.setVerticalGroup(
-            noTeleponPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, noTeleponPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(noTeleponLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(noTeleponTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         namaHewanPanel.setBackground(new java.awt.Color(255, 255, 255));
         namaHewanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
 
         namaHewanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         namaHewanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        namaHewanLabel.setText("Nama Hewan");
+        namaHewanLabel.setText("ID Hewan");
 
         namaHewanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         namaHewanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
@@ -296,10 +255,10 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
             .addGroup(namaHewanPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(namaHewanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(namaHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(namaHewanPanelLayout.createSequentialGroup()
                         .addComponent(namaHewanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(namaHewanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 58, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         namaHewanPanelLayout.setVerticalGroup(
@@ -372,42 +331,12 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        durasiPenitipanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        durasiPenitipanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        durasiPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        durasiPenitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        durasiPenitipanLabel.setText("Durasi (Hari)");
-
-        durasiPenitipanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-
-        javax.swing.GroupLayout durasiPenitipanPanelLayout = new javax.swing.GroupLayout(durasiPenitipanPanel);
-        durasiPenitipanPanel.setLayout(durasiPenitipanPanelLayout);
-        durasiPenitipanPanelLayout.setHorizontalGroup(
-            durasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(durasiPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(durasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(durasiPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(durasiPenitipanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        durasiPenitipanPanelLayout.setVerticalGroup(
-            durasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, durasiPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(durasiPenitipanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(durasiPenitipanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         biayaPenitipanPanel.setBackground(new java.awt.Color(255, 255, 255));
         biayaPenitipanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
 
         biayaPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         biayaPenitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        biayaPenitipanLabel.setText("Biaya Penitipan");
+        biayaPenitipanLabel.setText("Total Biaya");
 
         biayaPenitipanTextField.setPreferredSize(new java.awt.Dimension(72, 21));
 
@@ -418,170 +347,19 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
             .addGroup(biayaPenitipanPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(biayaPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(biayaPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(biayaPenitipanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(biayaPenitipanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(biayaPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         biayaPenitipanPanelLayout.setVerticalGroup(
             biayaPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, biayaPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(biayaPenitipanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(biayaPenitipanTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        statusPenitipanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        statusPenitipanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        statusPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        statusPenitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        statusPenitipanLabel.setText("Status Penitipan");
-
-        statusPenitipanDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        statusPenitipanDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
-        statusPenitipanDropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statusPenitipanDropdownActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout statusPenitipanPanelLayout = new javax.swing.GroupLayout(statusPenitipanPanel);
-        statusPenitipanPanel.setLayout(statusPenitipanPanelLayout);
-        statusPenitipanPanelLayout.setHorizontalGroup(
-            statusPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(statusPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(statusPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(statusPenitipanPanelLayout.createSequentialGroup()
-                        .addComponent(statusPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 58, Short.MAX_VALUE))
-                    .addComponent(statusPenitipanDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        statusPenitipanPanelLayout.setVerticalGroup(
-            statusPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(statusPenitipanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statusPenitipanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        catatanPenitipanPanel.setBackground(new java.awt.Color(255, 255, 255));
-        catatanPenitipanPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        catatanPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        catatanPenitipanLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        catatanPenitipanLabel.setText("Catatan");
-
-        deskripsiProdukTextArea.setColumns(20);
-        deskripsiProdukTextArea.setRows(5);
-        catatanPenitipanScrollPane.setViewportView(deskripsiProdukTextArea);
-
-        javax.swing.GroupLayout catatanPenitipanPanelLayout = new javax.swing.GroupLayout(catatanPenitipanPanel);
-        catatanPenitipanPanel.setLayout(catatanPenitipanPanelLayout);
-        catatanPenitipanPanelLayout.setHorizontalGroup(
-            catatanPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(catatanPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(catatanPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(catatanPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(catatanPenitipanScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        catatanPenitipanPanelLayout.setVerticalGroup(
-            catatanPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, catatanPenitipanPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(catatanPenitipanLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(catatanPenitipanScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout penitipanFormPanelLayout = new javax.swing.GroupLayout(penitipanFormPanel);
-        penitipanFormPanel.setLayout(penitipanFormPanelLayout);
-        penitipanFormPanelLayout.setHorizontalGroup(
-            penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                        .addComponent(penitipanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(idPenitipanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                                    .addComponent(noTeleponPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
-                                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(namaPemilikPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                                    .addComponent(namaHewanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tanggalMasukPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(durasiPenitipanPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(statusPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(tanggalKeluarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, penitipanFormPanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(biayaPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(catatanPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
-        );
-        penitipanFormPanelLayout.setVerticalGroup(
-            penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(penitipanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(namaPemilikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(noTeleponPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(namaHewanPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(tanggalKeluarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tanggalMasukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(durasiPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(biayaPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(statusPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
-                                .addComponent(catatanPenitipanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
-                                .addContainerGap())))))
-        );
-
-        simpanPenitipanButton.setBackground(new java.awt.Color(51, 178, 73));
-        simpanPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        simpanPenitipanButton.setForeground(new java.awt.Color(255, 255, 255));
-        simpanPenitipanButton.setText("Simpan");
-        simpanPenitipanButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                simpanPenitipanButtonActionPerformed(evt);
-            }
-        });
 
         batalPenitipanButton.setBackground(new java.awt.Color(237, 8, 0));
         batalPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
@@ -593,9 +371,98 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
             }
         });
 
-        penitipanScrollPane.setBackground(new java.awt.Color(255, 255, 255));
+        simpanPenitipanButton.setBackground(new java.awt.Color(51, 178, 73));
+        simpanPenitipanButton.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        simpanPenitipanButton.setForeground(new java.awt.Color(255, 255, 255));
+        simpanPenitipanButton.setText("Simpan");
+        simpanPenitipanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                simpanPenitipanButtonActionPerformed(evt);
+            }
+        });
 
-        tablePenitipan.setModel(new javax.swing.table.DefaultTableModel(
+        javax.swing.GroupLayout penitipanFormPanelLayout = new javax.swing.GroupLayout(penitipanFormPanel);
+        penitipanFormPanel.setLayout(penitipanFormPanelLayout);
+        penitipanFormPanelLayout.setHorizontalGroup(
+            penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(penitipanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                        .addComponent(simpanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(batalPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                            .addComponent(namaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(48, 48, 48)
+                            .addComponent(biayaPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                                .addComponent(namaPemilikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tanggalKeluarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                                .addComponent(idPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(48, 48, 48)
+                                .addComponent(tanggalMasukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        penitipanFormPanelLayout.setVerticalGroup(
+            penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(idPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tanggalMasukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(namaPemilikPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tanggalKeluarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(biayaPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(namaHewanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(penitipanFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(batalPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(simpanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(penitipanFormPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(penitipanButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        headerPenitipanPanel.setBackground(new java.awt.Color(190, 205, 238));
+
+        headerPenitipanLabel.setFont(new java.awt.Font("Segoe UI Semibold", 0, 28)); // NOI18N
+        headerPenitipanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/animal-care.png"))); // NOI18N
+        headerPenitipanLabel.setText("  Penitipan");
+
+        javax.swing.GroupLayout headerPenitipanPanelLayout = new javax.swing.GroupLayout(headerPenitipanPanel);
+        headerPenitipanPanel.setLayout(headerPenitipanPanelLayout);
+        headerPenitipanPanelLayout.setHorizontalGroup(
+            headerPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPenitipanPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(headerPenitipanLabel)
+                .addGap(575, 575, 575))
+        );
+        headerPenitipanPanelLayout.setVerticalGroup(
+            headerPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPenitipanPanelLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(headerPenitipanLabel)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        dataPenitiapanPanel.setBackground(new java.awt.Color(124, 147, 195));
+
+        tableCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -606,58 +473,123 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tablePenitipan.addMouseListener(new java.awt.event.MouseAdapter() {
+        tableCustomer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablePenitipanMouseClicked(evt);
+                tableCustomerMouseClicked(evt);
             }
         });
-        penitipanScrollPane.setViewportView(tablePenitipan);
+        dataPenitipanScrollPane.setViewportView(tableCustomer);
+
+        dataPenitipanLabel.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        dataPenitipanLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dataPenitipanLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dataHewan.png"))); // NOI18N
+        dataPenitipanLabel.setText("DATA PENITIPAN");
+
+        javax.swing.GroupLayout dataPenitiapanPanelLayout = new javax.swing.GroupLayout(dataPenitiapanPanel);
+        dataPenitiapanPanel.setLayout(dataPenitiapanPanelLayout);
+        dataPenitiapanPanelLayout.setHorizontalGroup(
+            dataPenitiapanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(dataPenitipanScrollPane)
+            .addGroup(dataPenitiapanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(dataPenitipanLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dataPenitiapanPanelLayout.setVerticalGroup(
+            dataPenitiapanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataPenitiapanPanelLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(dataPenitipanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dataPenitipanScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
+        );
+
+        informasiPenitipanPanel.setBackground(new java.awt.Color(238, 242, 250));
+        informasiPenitipanPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hanya Yang Diterima", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Berlin Sans FB Demi", 0, 12))); // NOI18N
+
+        gambarKucingPenitipan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/cat.png"))); // NOI18N
+
+        gambarAnjingPenitipan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/dog.png"))); // NOI18N
+
+        catPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        catPenitipanLabel.setText("CAT");
+
+        dogPenitipanLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 18)); // NOI18N
+        dogPenitipanLabel.setText("DOG");
+
+        javax.swing.GroupLayout informasiPenitipanPanelLayout = new javax.swing.GroupLayout(informasiPenitipanPanel);
+        informasiPenitipanPanel.setLayout(informasiPenitipanPanelLayout);
+        informasiPenitipanPanelLayout.setHorizontalGroup(
+            informasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(informasiPenitipanPanelLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(gambarKucingPenitipan)
+                .addGap(46, 46, 46)
+                .addComponent(gambarAnjingPenitipan)
+                .addContainerGap(34, Short.MAX_VALUE))
+            .addGroup(informasiPenitipanPanelLayout.createSequentialGroup()
+                .addGap(125, 125, 125)
+                .addComponent(catPenitipanLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(dogPenitipanLabel)
+                .addGap(109, 109, 109))
+        );
+        informasiPenitipanPanelLayout.setVerticalGroup(
+            informasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(informasiPenitipanPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(informasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(gambarAnjingPenitipan)
+                    .addComponent(gambarKucingPenitipan))
+                .addGap(18, 18, 18)
+                .addGroup(informasiPenitipanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dogPenitipanLabel)
+                    .addComponent(catPenitipanLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(headerPenitipanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchPenitipanInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1251, Short.MAX_VALUE)
-                    .addComponent(penitipanScrollPane)
-                    .addComponent(penitipanFormPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(simpanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(batalPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(searchPenitipanInputPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1336, Short.MAX_VALUE)
+                    .addComponent(dataPenitiapanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addComponent(penitipanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(informasiPenitipanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(penitipanLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(penitipanLabel)
+                .addComponent(headerPenitipanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(searchPenitipanInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(penitipanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(simpanPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(batalPenitipanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(penitipanFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(informasiPenitipanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(penitipanScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(dataPenitiapanPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -693,17 +625,13 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_batalPenitipanButtonActionPerformed
 
-    private void tablePenitipanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablePenitipanMouseClicked
-        
-    }//GEN-LAST:event_tablePenitipanMouseClicked
-
     private void namaHewanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaHewanDropdownActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_namaHewanDropdownActionPerformed
 
-    private void statusPenitipanDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statusPenitipanDropdownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_statusPenitipanDropdownActionPerformed
+    private void tableCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableCustomerMouseClicked
+
+    }//GEN-LAST:event_tableCustomerMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -712,17 +640,20 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel biayaPenitipanLabel;
     private javax.swing.JPanel biayaPenitipanPanel;
     private javax.swing.JTextField biayaPenitipanTextField;
-    private javax.swing.JLabel catatanPenitipanLabel;
-    private javax.swing.JPanel catatanPenitipanPanel;
-    private javax.swing.JScrollPane catatanPenitipanScrollPane;
-    private javax.swing.JTextArea deskripsiProdukTextArea;
-    private javax.swing.JLabel durasiPenitipanLabel;
-    private javax.swing.JPanel durasiPenitipanPanel;
-    private javax.swing.JTextField durasiPenitipanTextField;
+    private javax.swing.JLabel catPenitipanLabel;
+    private javax.swing.JPanel dataPenitiapanPanel;
+    private javax.swing.JLabel dataPenitipanLabel;
+    private javax.swing.JScrollPane dataPenitipanScrollPane;
+    private javax.swing.JLabel dogPenitipanLabel;
+    private javax.swing.JLabel gambarAnjingPenitipan;
+    private javax.swing.JLabel gambarKucingPenitipan;
     private javax.swing.JButton hapusPenitipanButton;
+    private javax.swing.JLabel headerPenitipanLabel;
+    private javax.swing.JPanel headerPenitipanPanel;
     private javax.swing.JLabel idPenitipanLabel;
     private javax.swing.JPanel idPenitipanPanel;
     private javax.swing.JTextField idPenitipanTextField;
+    private javax.swing.JPanel informasiPenitipanPanel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JComboBox<KendaraanE> namaHewanDropdown;
     private javax.swing.JLabel namaHewanLabel;
@@ -730,22 +661,14 @@ public class PenitipanMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel namaPemilikLabel;
     private javax.swing.JPanel namaPemilikPanel;
     private javax.swing.JTextField namaPemilikTextField;
-    private javax.swing.JLabel noTeleponLabel;
-    private javax.swing.JPanel noTeleponPanel;
-    private javax.swing.JTextField noTeleponTextField;
     private javax.swing.JPanel penitipanButtonPanel;
     private javax.swing.JPanel penitipanFormPanel;
-    private javax.swing.JLabel penitipanLabel;
-    private javax.swing.JScrollPane penitipanScrollPane;
     private javax.swing.JButton searchPenitipanInputButton;
     private javax.swing.JLabel searchPenitipanInputLabel;
     private javax.swing.JPanel searchPenitipanInputPanel;
     private javax.swing.JTextField searchPenitipanInputTextField;
     private javax.swing.JButton simpanPenitipanButton;
-    private javax.swing.JComboBox<KendaraanE> statusPenitipanDropdown;
-    private javax.swing.JLabel statusPenitipanLabel;
-    private javax.swing.JPanel statusPenitipanPanel;
-    private javax.swing.JTable tablePenitipan;
+    private javax.swing.JTable tableCustomer;
     private javax.swing.JButton tambahPenitipanButton;
     private com.toedter.calendar.JDateChooser tanggalKeluarJDateChooser;
     private javax.swing.JLabel tanggalKeluarLabel;

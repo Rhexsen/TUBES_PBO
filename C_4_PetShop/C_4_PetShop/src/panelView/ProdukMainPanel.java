@@ -1,13 +1,54 @@
-package panelView;
+package ViewPanel;
+import control.ProdukControl;
+import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
+import model.Produk;
+import table.TableProduk;
 
 public class ProdukMainPanel extends javax.swing.JPanel {
     
+    private ProdukControl pc = new ProdukControl();
+    private String action = null;
+    private int selectedId = -1;
 
     public ProdukMainPanel() {
         initComponents();
+
         setOpaque(false);
 
+        setTableProduk("");
+        clearText();
+        setComponent(false);
+        idProdukTextField.setEditable(false);
+        idProdukTextField.setEnabled(false);
     }
+    
+    private void setTableProduk(String search){
+        produkTable.setModel(new TableProduk(pc.showData(search)));
+    }
+    
+    private void clearText(){
+        idProdukTextField.setText("");
+        namaProdukTextField.setText("");
+        kategoriProdukComboBox.setSelectedIndex(0);
+        hargaProdukTextField.setText("");
+        jSpinner1.setValue(0);
+    }
+    
+    private void setComponent(boolean value){
+        namaProdukTextField.setEnabled(value);
+        kategoriProdukComboBox.setEnabled(value);
+        hargaProdukTextField.setEnabled(value);
+        jSpinner1.setEnabled(value);
+        simpanProdukButton.setEnabled(value);
+        batalProdukButton.setEnabled(value);
+    }
+    
+    private void setEditDeleteButton(boolean value){
+        barukanProdukButton.setEnabled(value);
+        hapusProdukButton.setEnabled(value);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -18,12 +59,16 @@ public class ProdukMainPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        produkLabel = new javax.swing.JLabel();
+        produkManagementPanel = new javax.swing.JPanel();
+        produkIconLabel = new javax.swing.JLabel();
+        produkManagementLabel = new javax.swing.JLabel();
+        produkManagementLabel2 = new javax.swing.JLabel();
         searchProdukInputPanel = new javax.swing.JPanel();
-        searchProdukInputLabel = new javax.swing.JLabel();
+        searchProdukIconLabel = new javax.swing.JLabel();
         searchProdukInputTextField = new javax.swing.JTextField();
         searchProdukInputButton = new javax.swing.JButton();
         produkFormPanel = new javax.swing.JPanel();
+        formProdukLabel = new javax.swing.JLabel();
         produkButtonPanel = new javax.swing.JPanel();
         barukanProdukButton = new javax.swing.JButton();
         hapusProdukButton = new javax.swing.JButton();
@@ -36,33 +81,70 @@ public class ProdukMainPanel extends javax.swing.JPanel {
         namaProdukTextField = new javax.swing.JTextField();
         kategoriProdukPanel = new javax.swing.JPanel();
         kategoriProdukLabel = new javax.swing.JLabel();
-        kategoriProdukDropdown = new javax.swing.JComboBox<>();
+        kategoriProdukComboBox = new javax.swing.JComboBox<>();
+        simpanProdukButton = new javax.swing.JButton();
+        batalProdukButton = new javax.swing.JButton();
         hargaProdukPanel = new javax.swing.JPanel();
         hargaProdukLabel = new javax.swing.JLabel();
         hargaProdukTextField = new javax.swing.JTextField();
         stokProdukPanel = new javax.swing.JPanel();
         stokProdukLabel = new javax.swing.JLabel();
-        stokProdukTextField = new javax.swing.JTextField();
-        deskripsiProdukPanel = new javax.swing.JPanel();
-        deskripsiProdukLabel = new javax.swing.JLabel();
-        deskripsiProdukScrollPane = new javax.swing.JScrollPane();
-        deskripsiProdukTextArea = new javax.swing.JTextArea();
-        simpanProdukButton = new javax.swing.JButton();
-        batalProdukButton = new javax.swing.JButton();
+        jSpinner1 = new javax.swing.JSpinner();
         produkScrollPane = new javax.swing.JScrollPane();
-        tableProduk = new javax.swing.JTable();
+        produkTable = new javax.swing.JTable();
+
+        setPreferredSize(new java.awt.Dimension(1356, 644));
 
         mainPanel.setBackground(new java.awt.Color(255, 255, 255));
+        mainPanel.setPreferredSize(new java.awt.Dimension(1356, 644));
 
-        produkLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 36)); // NOI18N
-        produkLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        produkLabel.setText("PRODUK");
+        produkManagementPanel.setBackground(new java.awt.Color(190, 205, 238));
+        produkManagementPanel.setPreferredSize(new java.awt.Dimension(1356, 99));
+
+        produkIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/produk.png"))); // NOI18N
+
+        produkManagementLabel.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
+        produkManagementLabel.setText("Produk MANAGEMENT");
+
+        produkManagementLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        produkManagementLabel2.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        produkManagementLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        produkManagementLabel2.setText("Kelola Data Produk PetShop dengan Mudah");
+
+        javax.swing.GroupLayout produkManagementPanelLayout = new javax.swing.GroupLayout(produkManagementPanel);
+        produkManagementPanel.setLayout(produkManagementPanelLayout);
+        produkManagementPanelLayout.setHorizontalGroup(
+            produkManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(produkManagementPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(produkIconLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(produkManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(produkManagementLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(produkManagementPanelLayout.createSequentialGroup()
+                        .addComponent(produkManagementLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(1105, 1105, 1105))
+        );
+        produkManagementPanelLayout.setVerticalGroup(
+            produkManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(produkManagementPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(produkManagementPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(produkManagementPanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(produkManagementLabel)
+                        .addGap(0, 0, 0)
+                        .addComponent(produkManagementLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(produkIconLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
 
         searchProdukInputPanel.setBackground(new java.awt.Color(255, 255, 255));
         searchProdukInputPanel.setPreferredSize(new java.awt.Dimension(687, 65));
 
-        searchProdukInputLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        searchProdukInputLabel.setText("Pencarian Produk");
+        searchProdukIconLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/search.png"))); // NOI18N
 
         searchProdukInputTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
         searchProdukInputTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +167,11 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 searchProdukInputButtonActionPerformed(evt);
             }
         });
+        searchProdukInputButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                searchProdukInputButtonKeyPressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout searchProdukInputPanelLayout = new javax.swing.GroupLayout(searchProdukInputPanel);
         searchProdukInputPanel.setLayout(searchProdukInputPanelLayout);
@@ -92,28 +179,31 @@ public class ProdukMainPanel extends javax.swing.JPanel {
             searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchProdukInputPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchProdukInputLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(searchProdukInputPanelLayout.createSequentialGroup()
-                        .addComponent(searchProdukInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 584, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(searchProdukInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(searchProdukIconLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(searchProdukInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchProdukInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         searchProdukInputPanelLayout.setVerticalGroup(
             searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(searchProdukInputPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(searchProdukInputLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(searchProdukInputTextField)
-                    .addComponent(searchProdukInputButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(searchProdukIconLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(searchProdukInputPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(searchProdukInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(searchProdukInputButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         produkFormPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        formProdukLabel.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        formProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
+        formProdukLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/form.png"))); // NOI18N
+        formProdukLabel.setText("FORM PRODUK");
 
         produkButtonPanel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -152,9 +242,9 @@ public class ProdukMainPanel extends javax.swing.JPanel {
         produkButtonPanelLayout.setHorizontalGroup(
             produkButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(produkButtonPanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(tambahProdukButton)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(barukanProdukButton)
                 .addGap(18, 18, 18)
                 .addComponent(hapusProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,8 +255,9 @@ public class ProdukMainPanel extends javax.swing.JPanel {
             .addGroup(produkButtonPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(produkButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(barukanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tambahProdukButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(produkButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(barukanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tambahProdukButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(hapusProdukButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -175,6 +266,7 @@ public class ProdukMainPanel extends javax.swing.JPanel {
         idProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
 
         idProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        idProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
         idProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         idProdukLabel.setText("ID Produk");
 
@@ -189,7 +281,7 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addGroup(idProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(idProdukPanelLayout.createSequentialGroup()
                         .addComponent(idProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(idProdukTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -199,14 +291,15 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(idProdukLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(idProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(idProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         namaProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
         namaProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
 
         namaProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        namaProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
         namaProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         namaProdukLabel.setText("Nama Produk");
 
@@ -222,7 +315,7 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addGroup(namaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(namaProdukPanelLayout.createSequentialGroup()
                         .addComponent(namaProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(namaProdukTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -232,24 +325,19 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(namaProdukLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(namaProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(namaProdukTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         kategoriProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
         kategoriProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
 
         kategoriProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        kategoriProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
         kategoriProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        kategoriProdukLabel.setText("Kategori Produk");
+        kategoriProdukLabel.setText("Kategori");
 
-        kategoriProdukDropdown.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        kategoriProdukDropdown.setPreferredSize(new java.awt.Dimension(72, 21));
-        kategoriProdukDropdown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kategoriProdukDropdownActionPerformed(evt);
-            }
-        });
+        kategoriProdukComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Makanan", "Aksesoris", "Mainan", "Obat", "Kandang" }));
 
         javax.swing.GroupLayout kategoriProdukPanelLayout = new javax.swing.GroupLayout(kategoriProdukPanel);
         kategoriProdukPanel.setLayout(kategoriProdukPanelLayout);
@@ -260,8 +348,8 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addGroup(kategoriProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(kategoriProdukPanelLayout.createSequentialGroup()
                         .addComponent(kategoriProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(kategoriProdukDropdown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 195, Short.MAX_VALUE))
+                    .addComponent(kategoriProdukComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         kategoriProdukPanelLayout.setVerticalGroup(
@@ -270,161 +358,8 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(kategoriProdukLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(kategoriProdukDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        hargaProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
-        hargaProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        hargaProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        hargaProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        hargaProdukLabel.setText("Harga Produk");
-
-        hargaProdukTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-        hargaProdukTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                hargaProdukTextFieldActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout hargaProdukPanelLayout = new javax.swing.GroupLayout(hargaProdukPanel);
-        hargaProdukPanel.setLayout(hargaProdukPanelLayout);
-        hargaProdukPanelLayout.setHorizontalGroup(
-            hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(hargaProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(hargaProdukPanelLayout.createSequentialGroup()
-                        .addComponent(hargaProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 120, Short.MAX_VALUE))
-                    .addComponent(hargaProdukTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        hargaProdukPanelLayout.setVerticalGroup(
-            hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hargaProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(hargaProdukLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(hargaProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-
-        stokProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
-        stokProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        stokProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        stokProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        stokProdukLabel.setText("Stok Produk");
-
-        stokProdukTextField.setPreferredSize(new java.awt.Dimension(72, 21));
-        stokProdukTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stokProdukTextFieldActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout stokProdukPanelLayout = new javax.swing.GroupLayout(stokProdukPanel);
-        stokProdukPanel.setLayout(stokProdukPanelLayout);
-        stokProdukPanelLayout.setHorizontalGroup(
-            stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(stokProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(stokProdukPanelLayout.createSequentialGroup()
-                        .addComponent(stokProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 187, Short.MAX_VALUE))
-                    .addComponent(stokProdukTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        stokProdukPanelLayout.setVerticalGroup(
-            stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, stokProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(stokProdukLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(stokProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        deskripsiProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
-        deskripsiProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
-
-        deskripsiProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
-        deskripsiProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        deskripsiProdukLabel.setText("Deskripsi Produk");
-
-        deskripsiProdukTextArea.setColumns(20);
-        deskripsiProdukTextArea.setRows(5);
-        deskripsiProdukScrollPane.setViewportView(deskripsiProdukTextArea);
-
-        javax.swing.GroupLayout deskripsiProdukPanelLayout = new javax.swing.GroupLayout(deskripsiProdukPanel);
-        deskripsiProdukPanel.setLayout(deskripsiProdukPanelLayout);
-        deskripsiProdukPanelLayout.setHorizontalGroup(
-            deskripsiProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(deskripsiProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(deskripsiProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(deskripsiProdukPanelLayout.createSequentialGroup()
-                        .addComponent(deskripsiProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(deskripsiProdukScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        deskripsiProdukPanelLayout.setVerticalGroup(
-            deskripsiProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deskripsiProdukPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(deskripsiProdukLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(deskripsiProdukScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout produkFormPanelLayout = new javax.swing.GroupLayout(produkFormPanel);
-        produkFormPanel.setLayout(produkFormPanelLayout);
-        produkFormPanelLayout.setHorizontalGroup(
-            produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(produkFormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(produkFormPanelLayout.createSequentialGroup()
-                        .addComponent(produkButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(produkFormPanelLayout.createSequentialGroup()
-                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(namaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(kategoriProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(hargaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(stokProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addComponent(deskripsiProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 236, Short.MAX_VALUE))))
-        );
-        produkFormPanelLayout.setVerticalGroup(
-            produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(produkFormPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(produkButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(produkFormPanelLayout.createSequentialGroup()
-                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(hargaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(stokProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(produkFormPanelLayout.createSequentialGroup()
-                                .addComponent(namaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(kategoriProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(deskripsiProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(kategoriProdukComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         simpanProdukButton.setBackground(new java.awt.Color(51, 178, 73));
@@ -447,9 +382,128 @@ public class ProdukMainPanel extends javax.swing.JPanel {
             }
         });
 
+        hargaProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
+        hargaProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        hargaProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        hargaProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
+        hargaProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        hargaProdukLabel.setText("Harga");
+
+        hargaProdukTextField.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        hargaProdukTextField.setPreferredSize(new java.awt.Dimension(72, 21));
+
+        javax.swing.GroupLayout hargaProdukPanelLayout = new javax.swing.GroupLayout(hargaProdukPanel);
+        hargaProdukPanel.setLayout(hargaProdukPanelLayout);
+        hargaProdukPanelLayout.setHorizontalGroup(
+            hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hargaProdukPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hargaProdukPanelLayout.createSequentialGroup()
+                        .addComponent(hargaProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 195, Short.MAX_VALUE))
+                    .addComponent(hargaProdukTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        hargaProdukPanelLayout.setVerticalGroup(
+            hargaProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, hargaProdukPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(hargaProdukLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hargaProdukTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+
+        stokProdukPanel.setBackground(new java.awt.Color(255, 255, 255));
+        stokProdukPanel.setPreferredSize(new java.awt.Dimension(322, 60));
+
+        stokProdukLabel.setFont(new java.awt.Font("Berlin Sans FB Demi", 0, 12)); // NOI18N
+        stokProdukLabel.setForeground(new java.awt.Color(0, 0, 0));
+        stokProdukLabel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        stokProdukLabel.setText("Stok");
+
+        javax.swing.GroupLayout stokProdukPanelLayout = new javax.swing.GroupLayout(stokProdukPanel);
+        stokProdukPanel.setLayout(stokProdukPanelLayout);
+        stokProdukPanelLayout.setHorizontalGroup(
+            stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(stokProdukPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(stokProdukPanelLayout.createSequentialGroup()
+                        .addComponent(stokProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jSpinner1))
+                .addContainerGap())
+        );
+        stokProdukPanelLayout.setVerticalGroup(
+            stokProdukPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, stokProdukPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(stokProdukLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(7, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout produkFormPanelLayout = new javax.swing.GroupLayout(produkFormPanel);
+        produkFormPanel.setLayout(produkFormPanelLayout);
+        produkFormPanelLayout.setHorizontalGroup(
+            produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(produkFormPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(produkFormPanelLayout.createSequentialGroup()
+                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(produkFormPanelLayout.createSequentialGroup()
+                                .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(kategoriProdukPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(namaProdukPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(produkButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(idProdukPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(hargaProdukPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(stokProdukPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(81, 81, 81)
+                        .addComponent(simpanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(batalProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addGroup(produkFormPanelLayout.createSequentialGroup()
+                        .addComponent(formProdukLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+        produkFormPanelLayout.setVerticalGroup(
+            produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(produkFormPanelLayout.createSequentialGroup()
+                .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(produkFormPanelLayout.createSequentialGroup()
+                        .addComponent(formProdukLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(produkButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(namaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(kategoriProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(hargaProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(stokProdukPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(produkFormPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(produkFormPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(simpanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(batalProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         produkScrollPane.setBackground(new java.awt.Color(255, 255, 255));
 
-        tableProduk.setModel(new javax.swing.table.DefaultTableModel(
+        produkTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -460,117 +514,142 @@ public class ProdukMainPanel extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        tableProduk.addMouseListener(new java.awt.event.MouseAdapter() {
+        produkTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tableProdukMouseClicked(evt);
+                produkTableMouseClicked(evt);
             }
         });
-        produkScrollPane.setViewportView(tableProduk);
+        produkScrollPane.setViewportView(produkTable);
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(produkManagementPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1464, Short.MAX_VALUE)
+            .addComponent(searchProdukInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1464, Short.MAX_VALUE)
             .addGroup(mainPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(searchProdukInputPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1240, Short.MAX_VALUE)
-                    .addComponent(produkScrollPane)
-                    .addComponent(produkFormPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(simpanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(batalProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(produkFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(produkScrollPane)
                 .addContainerGap())
-            .addComponent(produkLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainPanelLayout.setVerticalGroup(
             mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(produkLabel)
+                .addComponent(produkManagementPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(searchProdukInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(searchProdukInputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(produkFormPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(simpanProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(batalProdukButton, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(produkScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(produkFormPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(produkScrollPane)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 647, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchProdukInputTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchProdukInputTextFieldKeyPressed
-        
+        if(evt.getKeyCode() == KeyEvent.VK_ENTER){
+            setTableProduk(searchProdukInputTextField.getText());
+        }
     }//GEN-LAST:event_searchProdukInputTextFieldKeyPressed
 
     private void searchProdukInputButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchProdukInputButtonActionPerformed
-       
+       setTableProduk(searchProdukInputTextField.getText());    
     }//GEN-LAST:event_searchProdukInputButtonActionPerformed
 
     private void barukanProdukButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barukanProdukButtonActionPerformed
-        
+        action = "Ubah";
+        setComponent(true);
     }//GEN-LAST:event_barukanProdukButtonActionPerformed
 
     private void hapusProdukButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hapusProdukButtonActionPerformed
-        
+        int pilihan = JOptionPane.showConfirmDialog(null,"Yakin ingin menghapus data?","Konfirmasi",JOptionPane.YES_NO_OPTION);
+
+        if(pilihan == JOptionPane.YES_OPTION){
+            pc.deleteData(selectedId);
+            clearText();
+            setTableProduk("");
+            setComponent(false);
+            setEditDeleteButton(false);
+        }
     }//GEN-LAST:event_hapusProdukButtonActionPerformed
 
     private void tambahProdukButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahProdukButtonActionPerformed
-        
+        action = "Tambah";
+        clearText();
+        setComponent(true);
+        setEditDeleteButton(false);
     }//GEN-LAST:event_tambahProdukButtonActionPerformed
 
     private void simpanProdukButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanProdukButtonActionPerformed
-        
+        try{
+            if(namaProdukTextField.getText().isEmpty() || hargaProdukTextField.getText().isEmpty()){
+                throw new Exception("Semua data wajib diisi!");
+            }
+            Produk p = new Produk(namaProdukTextField.getText(),kategoriProdukComboBox.getSelectedItem().toString(),
+                            Double.parseDouble(hargaProdukTextField.getText()),
+                            (Integer)jSpinner1.getValue());
+            if(action.equals("Tambah")){
+                pc.insertData(p);
+            }else{
+                pc.updateData(p,selectedId);
+            }
+            JOptionPane.showMessageDialog(null,"Data berhasil disimpan!");
+            clearText();
+            setComponent(false);
+            setEditDeleteButton(false);
+            setTableProduk("");
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Harga harus berupa angka!");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+        }
     }//GEN-LAST:event_simpanProdukButtonActionPerformed
 
     private void searchProdukInputTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchProdukInputTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_searchProdukInputTextFieldActionPerformed
 
-    private void kategoriProdukDropdownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kategoriProdukDropdownActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_kategoriProdukDropdownActionPerformed
-
     private void batalProdukButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalProdukButtonActionPerformed
-        
+        clearText();
+        setComponent(false);
+        setEditDeleteButton(false);
     }//GEN-LAST:event_batalProdukButtonActionPerformed
 
-    private void tableProdukMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tableProdukMouseClicked
-        
-    }//GEN-LAST:event_tableProdukMouseClicked
+    private void produkTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_produkTableMouseClicked
+        int row = produkTable.getSelectedRow();
+        selectedId = Integer.parseInt(produkTable.getValueAt(row, 0).toString().replace("PR", ""));
+        Produk p = pc.searchData(selectedId);
+        idProdukTextField.setText("PR" + p.getId_produk());
+        namaProdukTextField.setText(p.getNama_produk());
+        kategoriProdukComboBox.setSelectedItem(p.getKategori());
+        hargaProdukTextField.setText(String.valueOf(p.getHarga()));
+        jSpinner1.setValue(p.getStok());
+        setEditDeleteButton(true);
+    }//GEN-LAST:event_produkTableMouseClicked
 
-    private void hargaProdukTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hargaProdukTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hargaProdukTextFieldActionPerformed
-
-    private void stokProdukTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stokProdukTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_stokProdukTextFieldActionPerformed
+    private void searchProdukInputButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchProdukInputButtonKeyPressed
+        setTableProduk(searchProdukInputTextField.getText());
+    }//GEN-LAST:event_searchProdukInputButtonKeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton barukanProdukButton;
     private javax.swing.JButton batalProdukButton;
-    private javax.swing.JLabel deskripsiProdukLabel;
-    private javax.swing.JPanel deskripsiProdukPanel;
-    private javax.swing.JScrollPane deskripsiProdukScrollPane;
-    private javax.swing.JTextArea deskripsiProdukTextArea;
+    private javax.swing.JLabel formProdukLabel;
     private javax.swing.JButton hapusProdukButton;
     private javax.swing.JLabel hargaProdukLabel;
     private javax.swing.JPanel hargaProdukPanel;
@@ -578,7 +657,8 @@ public class ProdukMainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel idProdukLabel;
     private javax.swing.JPanel idProdukPanel;
     private javax.swing.JTextField idProdukTextField;
-    private javax.swing.JComboBox<KendaraanE> kategoriProdukDropdown;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JComboBox<String> kategoriProdukComboBox;
     private javax.swing.JLabel kategoriProdukLabel;
     private javax.swing.JPanel kategoriProdukPanel;
     private javax.swing.JPanel mainPanel;
@@ -587,17 +667,19 @@ public class ProdukMainPanel extends javax.swing.JPanel {
     private javax.swing.JTextField namaProdukTextField;
     private javax.swing.JPanel produkButtonPanel;
     private javax.swing.JPanel produkFormPanel;
-    private javax.swing.JLabel produkLabel;
+    private javax.swing.JLabel produkIconLabel;
+    private javax.swing.JLabel produkManagementLabel;
+    private javax.swing.JLabel produkManagementLabel2;
+    private javax.swing.JPanel produkManagementPanel;
     private javax.swing.JScrollPane produkScrollPane;
+    private javax.swing.JTable produkTable;
+    private javax.swing.JLabel searchProdukIconLabel;
     private javax.swing.JButton searchProdukInputButton;
-    private javax.swing.JLabel searchProdukInputLabel;
     private javax.swing.JPanel searchProdukInputPanel;
     private javax.swing.JTextField searchProdukInputTextField;
     private javax.swing.JButton simpanProdukButton;
     private javax.swing.JLabel stokProdukLabel;
     private javax.swing.JPanel stokProdukPanel;
-    private javax.swing.JTextField stokProdukTextField;
-    private javax.swing.JTable tableProduk;
     private javax.swing.JButton tambahProdukButton;
     // End of variables declaration//GEN-END:variables
 }
